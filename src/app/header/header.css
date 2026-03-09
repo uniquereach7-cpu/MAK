@@ -1,0 +1,80 @@
+/* Import custom Grift font */
+/* Ensure the font files are in your src/assets/fonts/ folder */
+@font-face {
+  font-family: 'Grift';
+  src: url('/assets/fonts/Grift-Bold.woff2') format('woff2'),
+       url('/assets/fonts/Grift-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.navbar {
+  /* Use a solid, semi-transparent color for the glossy effect */
+  background-color: rgba(10, 10, 10, 0.75); /* Dark and see-through */
+
+  /* This creates the "glossy" or "glass" blur effect */
+  backdrop-filter: blur(15px); 
+  -webkit-backdrop-filter: blur(15px); /* For Safari support */
+
+  /* A subtle border to define the bottom edge of the glass header */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  
+  /* Position: fixed to float over your background image */
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; 
+  
+  height: 100px; /* Adjust height as needed */
+  padding: 0 5%; 
+  
+  /* Flexbox for layout */
+  display: flex;
+  align-items: center;
+  /* Pushes the logo to the left and nav links to the right */
+  justify-content: space-between; 
+  
+  box-sizing: border-box;
+  font-family: 'Grift', sans-serif; 
+}
+
+/*--- LOGO STYLES ---*/
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+}
+
+.logo-container img {
+  /* Adjust the height to fit your logo perfectly */
+  max-height: 80px; 
+  width: auto; 
+}
+
+/*--- NAVIGATION LINKS ---*/
+.navbar nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 35px; /* Spacing between links */
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: #ffffff; /* Default white text */
+  font-size: 16px;
+  font-weight: normal; 
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out; 
+}
+
+/* Active and Hover States */
+.navbar nav ul li a:hover,
+.navbar nav ul li a.active {
+  color: #e5b33f; /* The gold/yellow color */
+}

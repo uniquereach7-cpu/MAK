@@ -1,0 +1,163 @@
+<!-- ============================================================
+     MODULAR PAGE — ARMONIA EXCURSIONS TRAVEL AGENCY DESIGN
+     ============================================================ -->
+<div class="mod-page">
+
+  <!-- ======== SECTION 1: HERO ======== -->
+  <section class="mod-hero">
+    <div class="mod-hero__top">
+      <div class="mod-hero__heading-col">
+        <h1 class="mod-hero__title">
+          <span class="mod-hero__title-line">Precision</span>
+          <span class="mod-hero__title-line">Modular Interiors</span>
+        </h1>
+      </div>
+      <div class="mod-hero__info-col">
+        <p class="mod-hero__subtitle">
+          The most popular and trusted<br>Modular Company in India
+        </p>
+        <a href="#services" class="mod-hero__explore-link">
+          EXPLORE OUR SERVICES
+          <span class="mod-link-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+    <div class="mod-hero__image-wrap">
+      <img src="assets/hero2.jpg" alt="Greek ruins landscape" class="mod-hero__image" />
+    </div>
+  </section>
+
+  <!-- ======== SECTION 2: ABOUT + WHY CHOOSE US ======== -->
+  <section class="mod-about">
+    <!-- Left area: narrow image + content text + why choose us -->
+    <div class="mod-about__left-area">
+      <div class="mod-about__top-row">
+        <!-- Narrow tall image on the left -->
+        <div class="mod-about__side-image">
+          <img src="assets/hero4.jpg" alt="Mountain cliff landscape" />
+        </div>
+        <!-- Text content -->
+        <div class="mod-about__content">
+          <div class="mod-section-tag">
+            <span class="mod-tag-icon">✦</span>
+            <span>ABOUT US</span>
+          </div>
+          <h2 class="mod-about__heading">
+           Creating Functional Spaces with Modern Modular Solutions
+          </h2>
+          <p class="mod-about__desc">
+            At MAK, we combine thoughtful design with precision execution to deliver high-quality modular interior solutions. 
+            Whether it’s a custom kitchen, smart storage systems, or complete interior spaces, our team focuses on creating environments that balance functionality, aesthetics, and durability.
+            <br>
+            Through our expertise and collaboration with trusted interior design partners, we ensure every project is handled with attention to detail, efficient execution, and a commitment to quality, 
+            so our clients can experience interiors that are both practical and beautifully designed.
+          </p>
+          <a routerLink="/about" class="mod-text-link">
+            MORE ABOUT US <span class="mod-link-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Why Choose Us -->
+      <div class="mod-why">
+        <h3 class="mod-why__heading">Why Choose Us?</h3>
+        <div class="mod-why__features">
+          <div class="mod-why__feature">
+            <div class="mod-why__feature-header">
+              <h4 class="mod-why__feature-title">Professional team</h4>
+              <div class="mod-why__icon mod-why__icon--star">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+              </div>
+            </div>
+            <p class="mod-why__feature-desc">
+              Our team brings strong experience in interior design and modular solutions, ensuring every space is designed with precision, functionality, and attention to detail.
+            </p>
+          </div>
+          <div class="mod-why__feature">
+            <div class="mod-why__feature-header">
+              <h4 class="mod-why__feature-title">Reliable & Flexible Solutions</h4>
+              <div class="mod-why__icon mod-why__icon--pin">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="10" r="3"/>
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                </svg>
+              </div>
+            </div>
+            <p class="mod-why__feature-desc">
+             From modular kitchens and wardrobes to complete interior installations, we provide solutions tailored to your space, style, and project requirements.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right tall image -->
+    <div class="mod-about__right-image">
+      <img src="assets/about.jpg" alt="Greek columns architecture" />
+    </div>
+  </section>
+
+  <!-- ======== SECTION 3: SERVICES ======== -->
+  <section class="mod-services" id="services">
+    <div class="mod-services__header">
+      <div class="mod-section-tag mod-section-tag--center">
+        <span class="mod-tag-icon">✦</span>
+        <span>SERVICES</span>
+      </div>
+      <h2 class="mod-services__heading">What we offer?</h2>
+      <p class="mod-services__subtitle">
+       From modular interior solutions to complete installation support. <br> We provide services designed to create functional, modern, and efficient spaces.
+      </p>
+    </div>
+
+    <div class="mod-services__body">
+      <!-- Tab List -->
+      <div class="mod-services__tabs">
+        <button
+          *ngFor="let tab of tabs"
+          class="mod-tab"
+          [class.mod-tab--active]="activeTab === tab.id"
+          (click)="setActiveTab(tab.id)"
+        >
+          {{ tab.label }}
+        </button>
+      </div>
+
+      <!-- Content Panel -->
+      <div class="mod-services__panel">
+        <!-- Service Image -->
+        <div class="mod-services__image-wrap">
+          <img [src]="currentTab.image" [alt]="currentTab.headingItalic" class="mod-services__image" />
+        </div>
+
+        <!-- Service Text -->
+        <div class="mod-services__text">
+          <div class="mod-section-tag">
+            <span class="mod-tag-icon">✦</span>
+            <span>{{ currentTab.tag }}</span>
+          </div>
+          <h3 class="mod-services__title">
+            {{ currentTab.headingNormal }}<em>{{ currentTab.headingItalic }}</em>
+          </h3>
+          <p class="mod-services__sub">{{ currentTab.subheading }}</p>
+          <p class="mod-services__desc">{{ currentTab.description }}</p>
+          <div class="mod-services__highlight">
+            <span class="mod-services__highlight-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="10" r="3"/>
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              </svg>
+            </span>
+            <span>{{ currentTab.highlight }}</span>
+          </div>
+          <a routerLink="/contact" class="mod-text-link mod-services__link">
+            {{ currentTab.link }} <span class="mod-link-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>

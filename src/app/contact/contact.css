@@ -1,0 +1,580 @@
+/* ============================================================
+   GRIFT FONT DECLARATIONS
+   ============================================================ */
+@font-face {
+  font-family: 'GriftBold';
+  src: url('/assets/fonts/grift-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GriftBoldItalic';
+  src: url('/assets/fonts/grift-bolditalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GriftSemiBold';
+  src: url('/assets/fonts/grift-semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GriftMedium';
+  src: url('/assets/fonts/grift-medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GriftRegular';
+  src: url('/assets/fonts/grift-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GriftLight';
+  src: url('/assets/fonts/grift-light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* ============================================================
+   PAGE WRAPPER & DESIGN TOKENS
+   ============================================================ */
+.ctn-page {
+  --bg:          #ede8df;
+  --bg-alt:      #f3efe8;
+  --green:       #1e3520;
+  --green-mid:   #2d4a2d;
+  --gold:        #c99c43;
+  --gold-dim:    rgba(201, 156, 67, 0.18);
+  --gold-border: rgba(201, 156, 67, 0.45);
+  --text:        #1a1a1a;
+  --text-muted:  #7a7570;
+  --border:      #d8d0c5;
+  --radius:      12px;
+
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'GriftRegular', sans-serif;
+  padding-top: 100px;
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   SHARED UTILITIES
+   ============================================================ */
+.ctn-section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'GriftMedium', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+.ctn-section-tag--center {
+  display: flex;
+  justify-content: center;
+}
+.ctn-tag-icon {
+  font-size: 0.58rem;
+  color: var(--green);
+}
+
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+.ctn-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s ease var(--stagger, 0ms),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--stagger, 0ms);
+}
+.ctn-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   SECTION 2 · FORM + IMAGE
+   ============================================================ */
+.ctn-form-section {
+  background-color: var(--bg);
+  padding: 72px 5% 80px;
+  border-top: 1px solid var(--border);
+}
+
+.ctn-form-section__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* ---- Form Column ---- */
+.ctn-form-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.ctn-form-header {
+  margin-bottom: 36px;
+}
+
+.ctn-form-title {
+  font-family: 'GriftBold', serif;
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: bold;
+  color: var(--text);
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.ctn-form-title em {
+  font-family: 'GriftBoldItalic', serif;
+  font-style: italic;
+  color: var(--green);
+}
+
+/* Form layout */
+.ctn-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ctn-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.ctn-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ctn-field--full {
+  grid-column: 1 / -1;
+}
+
+.ctn-label {
+  font-family: 'GriftMedium', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.ctn-input,
+.ctn-select,
+.ctn-textarea {
+  font-family: 'GriftRegular', sans-serif;
+  font-size: 0.88rem;
+  color: var(--text);
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 11px 14px;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ctn-input::placeholder,
+.ctn-textarea::placeholder {
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+.ctn-input:focus,
+.ctn-select:focus,
+.ctn-textarea:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(30, 53, 32, 0.08);
+}
+
+/* Select wrapper */
+.ctn-select-wrap {
+  position: relative;
+}
+
+.ctn-select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-right: 36px;
+}
+
+.ctn-select-arrow {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  pointer-events: none;
+  line-height: 1;
+}
+
+/* Textarea */
+.ctn-textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+/* Submit row */
+.ctn-submit-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.ctn-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'GriftSemiBold', sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: var(--green);
+  border: none;
+  border-radius: 4px;
+  padding: 15px 32px;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.ctn-submit-btn:hover {
+  background: var(--green-mid);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(30, 53, 32, 0.25);
+}
+
+.ctn-submit-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  font-size: 0.82rem;
+  transition: transform 0.25s ease;
+}
+.ctn-submit-btn:hover .ctn-submit-arrow {
+  transform: rotate(45deg);
+}
+
+.ctn-submit-note {
+  font-family: 'GriftMedium', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--green);
+  margin: 0;
+}
+
+/* ---- Image Column ---- */
+.ctn-img-col {
+  position: sticky;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ctn-img-frame {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.ctn-hero-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: var(--radius);
+  transition: transform 0.5s ease;
+}
+.ctn-img-frame:hover .ctn-hero-img {
+  transform: scale(1.04);
+}
+
+/* Badge pill on image */
+.ctn-img-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 7px 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
+}
+.ctn-img-badge-sub {
+  font-family: 'GriftLight', sans-serif;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+.ctn-img-badge-main {
+  font-family: 'GriftSemiBold', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--green);
+}
+
+/* Accent / second image */
+.ctn-img-accent {
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 160px;
+}
+.ctn-img-accent-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.ctn-img-accent:hover .ctn-img-accent-img {
+  transform: scale(1.05);
+}
+
+/* ============================================================
+   SECTION 3 · CONTACT INFO STRIP
+   ============================================================ */
+.ctn-info-section {
+  background-color: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  padding: 60px 5%;
+}
+
+.ctn-info-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.ctn-info-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.32s ease, border-color 0.28s ease;
+}
+.ctn-info-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--green);
+  box-shadow: 0 16px 40px rgba(30, 53, 32, 0.1);
+}
+
+.ctn-info-icon {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.ctn-info-card:hover .ctn-info-icon {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.ctn-info-title {
+  font-family: 'GriftBold', serif;
+  font-size: 1rem;
+  color: var(--text);
+  margin: 0 0 10px 0;
+  line-height: 1.2;
+}
+
+.ctn-info-link {
+  font-family: 'GriftRegular', sans-serif;
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  line-height: 1.6;
+  transition: color 0.22s ease;
+  display: block;
+}
+.ctn-info-link:hover {
+  color: var(--green);
+}
+
+.ctn-info-link--addr {
+  font-size: 0.8rem;
+  line-height: 1.55;
+  margin-bottom: 6px;
+}
+
+.ctn-info-text {
+  font-family: 'GriftRegular', sans-serif;
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   SECTION 4 · MAP
+   ============================================================ */
+.ctn-map-section {
+  background-color: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 64px 5% 0;
+}
+
+.ctn-map-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.ctn-map-title {
+  font-family: 'GriftBold', serif;
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: bold;
+  color: var(--text);
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.ctn-map-title em {
+  font-family: 'GriftBoldItalic', serif;
+  font-style: italic;
+  color: var(--green);
+}
+
+.ctn-map-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  border-radius: var(--radius) var(--radius) 0 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-bottom: none;
+  box-shadow: 0 -4px 32px rgba(30, 53, 32, 0.06);
+}
+
+.ctn-map-iframe {
+  width: 100%;
+  height: 420px;
+  border: none;
+  display: block;
+}
+
+.ctn-map-open-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'GriftSemiBold', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: var(--green);
+  border-radius: 4px;
+  padding: 10px 18px;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 16px rgba(30, 53, 32, 0.3);
+}
+.ctn-map-open-btn:hover {
+  background: var(--green-mid);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(30, 53, 32, 0.35);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1100px) {
+  .ctn-form-section__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .ctn-img-col {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .ctn-img-frame {
+    grid-column: 1 / -1;
+  }
+  .ctn-hero-img {
+    height: 300px;
+  }
+  .ctn-img-accent {
+    height: 180px;
+  }
+  .ctn-info-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .ctn-form-row {
+    grid-template-columns: 1fr;
+  }
+  .ctn-info-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .ctn-img-col {
+    grid-template-columns: 1fr;
+  }
+  .ctn-img-accent {
+    display: none;
+  }
+  .ctn-map-iframe {
+    height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ctn-hero {
+    padding: 64px 5% 56px;
+  }
+  .ctn-info-inner {
+    grid-template-columns: 1fr;
+  }
+  .ctn-hero__heading {
+    font-size: 48px;
+  }
+  .ctn-submit-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ctn-map-section {
+    padding: 48px 5% 0;
+  }
+}

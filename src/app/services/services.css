@@ -1,0 +1,577 @@
+/* ============================================================
+   GRIFT FONT
+   ============================================================ */
+@font-face {
+  font-family: 'GriftBold';
+  src: url('/assets/fonts/grift-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GriftBoldItalic';
+  src: url('/assets/fonts/grift-bolditalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GriftSemiBold';
+  src: url('/assets/fonts/grift-semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GriftMedium';
+  src: url('/assets/fonts/grift-medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GriftRegular';
+  src: url('/assets/fonts/grift-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GriftLight';
+  src: url('/assets/fonts/grift-light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* ============================================================
+   PAGE WRAPPER & DESIGN TOKENS
+   ============================================================ */
+.srv-page {
+  --gold:          #1e3520;
+  --gold-dim:      rgba(30, 53, 32, 0.12);
+  --gold-glow:     rgba(30, 53, 32, 0.25);
+  --gold-border:   #d8d0c5;
+  --bg:            #ede8df;
+  --bg-alt:        #f3efe8;
+  --bg-card:       #f3efe8;
+  --bg-card-hover: #e8e3da;
+  --text:          #1a1a1a;
+  --text-muted:    #7a7570;
+  --text-dim:      #9a9087;
+  --radius:        16px;
+
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'GriftRegular', sans-serif;
+  padding-top: 100px; /* offset fixed header */
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   SHARED: SCROLL REVEAL BASE STATE
+   ============================================================ */
+.srv-intro__tag,
+.srv-intro__heading,
+.srv-intro__desc,
+.srv-intro__divider,
+.srv-stats__item,
+.srv-card {
+  opacity: 0;
+  transform: translateY(36px);
+  transition:
+    opacity 0.65s ease var(--stagger, 0ms),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1) var(--stagger, 0ms);
+}
+.srv-intro__tag  { --stagger: 0ms; }
+.srv-intro__heading { --stagger: 80ms; }
+.srv-intro__desc { --stagger: 160ms; }
+.srv-intro__divider { --stagger: 240ms; }
+
+/* When IntersectionObserver adds .visible */
+.srv-intro__tag.visible,
+.srv-intro__heading.visible,
+.srv-intro__desc.visible,
+.srv-intro__divider.visible,
+.srv-stats__item.visible,
+.srv-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   INTRO SECTION
+   ============================================================ */
+.srv-intro {
+  position: relative;
+  text-align: center;
+  padding: 72px 5% 60px;
+  max-width: 100%;
+  margin: 0 auto;
+  background-image: url('/assets/serviceshero2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-radius: 8px;
+}
+
+.srv-intro__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Tag */
+.srv-intro__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'GriftMedium', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  padding: 6px 16px;
+  border: 1px solid var(--gold);
+  border-radius: 20px;
+  background-color: rgba(30, 53, 32, 0.05);
+}
+.srv-tag-icon { font-size: 0.6rem; }
+
+/* Heading */
+.srv-intro__heading {
+  font-family: 'GriftBold', serif;
+  font-size: clamp(36px, 5vw, 68px);
+  font-weight: bold;
+  line-height: 1.1;
+  color: var(--text);
+  margin: 0 0 24px 0;
+  letter-spacing: -0.01em;
+}
+.srv-intro__heading em {
+  font-family: 'GriftBoldItalic', serif;
+  font-style: italic;
+  color: var(--gold);
+}
+
+/* Description */
+.srv-intro__desc {
+  font-family: 'GriftLight', sans-serif;
+  font-size: clamp(0.9rem, 1.4vw, 1.05rem);
+  line-height: 1.75;
+  color: black;
+  max-width: 680px;
+  margin: 0 0 36px 0;
+}
+
+/* Divider */
+.srv-intro__divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 48px;
+}
+.srv-intro__divider span:first-child,
+.srv-intro__divider span:last-child {
+  flex: 1;
+  height: 1px;
+  background: var(--text-muted);
+}
+.srv-intro__divider-icon {
+  font-size: 0.7rem;
+  color: var(--gold);
+}
+
+/* ============================================================
+   STATS STRIP
+   ============================================================ */
+.srv-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto 72px;
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(30, 53, 32, 0.08);
+}
+
+.srv-stats__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 16px;
+  gap: 4px;
+  --stagger: 0ms;
+}
+.srv-stats__item:nth-child(1) { --stagger: 0ms; }
+.srv-stats__item:nth-child(3) { --stagger: 80ms; }
+.srv-stats__item:nth-child(5) { --stagger: 160ms; }
+.srv-stats__item:nth-child(7) { --stagger: 240ms; }
+
+.srv-stats__sep {
+  width: 1px;
+  height: 44px;
+  background: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.srv-stats__number {
+  font-family: 'GriftBold', serif;
+  font-size: clamp(24px, 3vw, 36px);
+  color: var(--gold);
+  line-height: 1;
+}
+
+.srv-stats__label {
+  font-family: 'GriftLight', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   SERVICES GRID
+   ============================================================ */
+.srv-grid-section {
+  padding: 30px 5% 80px;
+}
+
+.srv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* ============================================================
+   SERVICE CARD
+   ============================================================ */
+.srv-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition:
+    transform 0.38s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.38s ease,
+    border-color 0.28s ease,
+    opacity 0.65s ease var(--stagger, 0ms),
+    translateY 0.65s cubic-bezier(0.22, 1, 0.36, 1) var(--stagger, 0ms);
+}
+
+/* Hover: lift + green glow border */
+.srv-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold);
+  box-shadow:
+    0 20px 60px rgba(30, 53, 32, 0.15),
+    0 0 0 1px var(--gold-glow),
+    0 0 32px var(--gold-dim);
+  background-color: #ffffff;
+}
+
+/* Glow layer (pseudo-glow behind card) */
+.srv-card__glow {
+  position: absolute;
+  inset: -1px;
+  border-radius: var(--radius);
+  opacity: 0;
+  background: radial-gradient(ellipse at 50% 100%, rgba(30, 53, 32, 0.08) 0%, transparent 70%);
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+.srv-card:hover .srv-card__glow {
+  opacity: 1;
+}
+
+/* ---- Card Image ---- */
+.srv-card__media {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.srv-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), filter 0.4s ease;
+}
+
+.srv-card:hover .srv-card__img {
+  transform: scale(1.09);
+  filter: brightness(1.05) saturate(1.1);
+}
+
+/* Dark gradient overlay on image */
+.srv-card__media-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(237, 232, 223, 0.5) 100%
+  );
+  transition: opacity 0.35s ease;
+}
+.srv-card:hover .srv-card__media-overlay {
+  opacity: 0.4;
+}
+
+/* Service tag badge on image */
+.srv-card__tag {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-family: 'GriftSemiBold', sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: var(--gold);
+  padding: 4px 10px;
+  border-radius: 4px;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+.srv-card:hover .srv-card__tag {
+  transform: scale(1.05);
+}
+
+/* ---- Card Body ---- */
+.srv-card__body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 22px 22px 24px;
+  background-color: var(--bg-card);
+}
+
+/* Top row: number + icon */
+.srv-card__top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.srv-card__number {
+  font-family: 'GriftBold', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+}
+
+.srv-card__icon {
+  font-size: 1.1rem;
+  color: var(--text-dim);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.srv-card:hover .srv-card__icon {
+  color: var(--gold);
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* Title */
+.srv-card__title {
+  font-family: 'GriftBold', serif;
+  font-size: clamp(17px, 1.5vw, 21px);
+  font-weight: bold;
+  color: var(--text);
+  margin: 0 0 6px 0;
+  line-height: 1.2;
+  transition: color 0.25s ease;
+}
+.srv-card:hover .srv-card__title {
+  color: var(--gold);
+}
+
+/* Short tagline */
+.srv-card__short {
+  font-family: 'GriftMedium', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--gold);
+  opacity: 0.8;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+}
+
+/* Description */
+.srv-card__desc {
+  font-family: 'GriftLight', sans-serif;
+  font-size: 0.83rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0 0 20px 0;
+  flex: 1;
+}
+
+/* Explore link */
+.srv-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'GriftSemiBold', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(201, 156, 67, 0.35);
+  padding-bottom: 2px;
+  width: fit-content;
+  transition: gap 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+.srv-card:hover .srv-card__link {
+  gap: 10px;
+  border-color: var(--gold);
+}
+
+.srv-card__arrow {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+.srv-card:hover .srv-card__arrow {
+  transform: translateX(4px);
+}
+
+/* ============================================================
+   BOTTOM CTA SECTION
+   ============================================================ */
+.srv-cta {
+  position: relative;
+  padding: 80px 5%;
+  text-align: center;
+  background: var(--bg-alt);
+  border-top: 1px solid var(--gold-border);
+  overflow: hidden;
+}
+
+/* Subtle radial glow behind CTA */
+.srv-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 200px;
+  background: radial-gradient(ellipse at center top, rgba(30, 53, 32, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.srv-cta__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.srv-cta__kicker {
+  font-family: 'GriftMedium', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 16px 0;
+}
+
+.srv-cta__heading {
+  font-family: 'GriftBold', serif;
+  font-size: clamp(28px, 4vw, 52px);
+  color: var(--text);
+  line-height: 1.15;
+  margin: 0 0 18px 0;
+}
+.srv-cta__heading em {
+  font-family: 'GriftBoldItalic', serif;
+  font-style: italic;
+  color: var(--gold);
+}
+
+.srv-cta__desc {
+  font-family: 'GriftLight', sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0 0 36px 0;
+}
+
+.srv-cta__btn {
+  display: inline-block;
+  padding: 14px 36px;
+  font-family: 'GriftSemiBold', sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: var(--gold);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.srv-cta__btn:hover {
+  background: #2d4a2d;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(30, 53, 32, 0.25);
+  color: #ffffff;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1100px) {
+  .srv-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .srv-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .srv-stats {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .srv-stats__item {
+    flex: 0 0 50%;
+    border-bottom: 1px solid var(--text-muted);
+  }
+  .srv-stats__sep {
+    display: none;
+  }
+}
+
+@media (max-width: 580px) {
+  .srv-grid {
+    grid-template-columns: 1fr;
+  }
+  .srv-intro__heading {
+    font-size: 32px;
+  }
+  .srv-stats__item {
+    flex: 0 0 100%;
+  }
+  .srv-card__media {
+    height: 200px;
+  }
+}

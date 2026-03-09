@@ -1,0 +1,609 @@
+/* ============================================================
+   GRIFT FONT DECLARATIONS
+   ============================================================ */
+@font-face {
+  font-family: 'GriftBold';
+  src: url('/assets/fonts/grift-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GriftBoldItalic';
+  src: url('/assets/fonts/grift-bolditalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GriftSemiBold';
+  src: url('/assets/fonts/grift-semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GriftMedium';
+  src: url('/assets/fonts/grift-medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GriftRegular';
+  src: url('/assets/fonts/grift-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GriftLight';
+  src: url('/assets/fonts/grift-light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* ============================================================
+   PAGE WRAPPER & DESIGN TOKENS
+   Aligned with services / modular pages
+   ============================================================ */
+.prj-page {
+  --bg:          #ede8df;
+  --bg-alt:      #f3efe8;
+  --green:       #1e3520;
+  --green-mid:   #2d4a2d;
+  --gold:        #c99c43;
+  --gold-dim:    rgba(201, 156, 67, 0.18);
+  --gold-border: rgba(201, 156, 67, 0.45);
+  --text:        #1a1a1a;
+  --text-muted:  #7a7570;
+  --border:      #d8d0c5;
+  --dark:        #0a1410;
+
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'GriftRegular', sans-serif;
+  padding-top: 130px;
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   SHARED: SCROLL REVEAL
+   ============================================================ */
+.prj-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s ease var(--stagger, 0ms),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--stagger, 0ms);
+}
+.prj-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   SHARED UTILITIES
+   ============================================================ */
+.prj-section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  font-family: 'GriftMedium', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+.prj-section-tag--center {
+  display: flex;
+  justify-content: center;
+}
+.prj-tag-icon {
+  font-size: 0.6rem;
+}
+
+/* ============================================================
+   SECTION 1 · HERO
+   Light bg with subtle fixed background image
+   ============================================================ */
+.prj-hero {
+  position: relative;
+  padding: 72px 5% 60px;
+  text-align: center;
+  background-image: url('/assets/serviceshero2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.prj-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(237, 232, 223, 0.93) 0%,
+    rgba(237, 232, 223, 0.88) 60%,
+    rgba(237, 232, 223, 0.85) 100%
+  );
+  z-index: 0;
+}
+
+.prj-hero__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Tag pill */
+.prj-hero__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'GriftMedium', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 22px;
+  padding: 6px 18px;
+  border: 1px solid var(--green);
+  border-radius: 20px;
+  background-color: rgba(30, 53, 32, 0.06);
+}
+
+/* Heading */
+.prj-hero__heading {
+  font-family: 'GriftBold', serif;
+  font-size: clamp(40px, 6vw, 80px);
+  font-weight: bold;
+  color: var(--text);
+  line-height: 1.05;
+  margin: 0 0 24px 0;
+  letter-spacing: -0.01em;
+}
+.prj-hero__heading em {
+  font-family: 'GriftBoldItalic', serif;
+  font-style: italic;
+  color: var(--green);
+}
+
+/* Description */
+.prj-hero__desc {
+  font-family: 'GriftLight', sans-serif;
+  font-size: clamp(0.88rem, 1.3vw, 1rem);
+  line-height: 1.78;
+  color: var(--text-muted);
+  max-width: 620px;
+  margin: 0 0 32px 0;
+}
+
+/* Divider */
+.prj-hero__divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 260px;
+  margin-bottom: 44px;
+}
+.prj-hero__divider span:first-child,
+.prj-hero__divider span:last-child {
+  flex: 1;
+  height: 1px;
+  background: var(--text-muted);
+  opacity: 0.5;
+}
+.prj-hero__divider-icon {
+  font-size: 0.65rem;
+  color: var(--green);
+}
+
+/* Stats strip */
+.prj-hero__stats {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(30, 53, 32, 0.08);
+}
+
+.prj-hero__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 32px;
+  gap: 2px;
+}
+
+.prj-hero__stat-sep {
+  width: 1px;
+  height: 36px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.prj-hero__stat-num {
+  font-family: 'GriftBold', serif;
+  font-size: clamp(22px, 2.5vw, 30px);
+  color: var(--green);
+  line-height: 1;
+}
+
+.prj-hero__stat-label {
+  font-family: 'GriftLight', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* ============================================================
+   SECTION 2 · PORTFOLIO GRID
+   Background image + dark overlay behind 3×3 card grid
+   ============================================================ */
+.prj-grid-section {
+  position: relative;
+  background-image: url('/assets/serviceshero.jpg');
+  background-size: cover;
+  background-position: center 40%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.prj-grid-section__bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(6, 12, 8, 0.88) 0%,
+    rgba(10, 20, 12, 0.82) 50%,
+    rgba(6, 12, 8, 0.90) 100%
+  );
+  z-index: 0;
+}
+
+.prj-grid-section__inner {
+  position: relative;
+  z-index: 1;
+  padding: 72px 5% 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Section label row */
+.prj-grid-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 52px;
+}
+
+.prj-label-line {
+  flex: 1;
+  max-width: 140px;
+  height: 1px;
+  background: rgba(201, 156, 67, 0.4);
+}
+
+.prj-label-text {
+  font-family: 'GriftMedium', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  white-space: nowrap;
+}
+
+/* ============================================================
+   PROJECT CARD
+   ============================================================ */
+.prj-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.prj-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 4 / 3;
+  background: #111;
+
+  /* Scroll reveal initial state */
+  opacity: 0;
+  transform: translateY(40px) scale(0.97);
+  transition:
+    opacity 0.65s ease var(--stagger, 0ms),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1) var(--stagger, 0ms),
+    box-shadow 0.4s ease;
+}
+.prj-card.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.prj-card:hover {
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.6),
+    0 0 0 1.5px rgba(201, 156, 67, 0.6);
+  z-index: 2;
+}
+
+/* Category badge (always visible, top-left) */
+.prj-card__badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 3;
+  font-family: 'GriftSemiBold', sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dark);
+  background: var(--gold);
+  padding: 4px 10px;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+.prj-card:hover .prj-card__badge {
+  transform: scale(1.05);
+}
+
+/* Image */
+.prj-card__media {
+  position: absolute;
+  inset: 0;
+}
+.prj-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), filter 0.4s ease;
+  will-change: transform;
+}
+.prj-card:hover .prj-card__img {
+  transform: scale(1.1);
+  filter: brightness(0.75) saturate(1.1);
+}
+
+/* Hover overlay (slides up from bottom) */
+.prj-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(6, 12, 8, 0.9) 0%,
+    rgba(6, 12, 8, 0.5) 55%,
+    transparent 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.42s ease, transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 2;
+  pointer-events: none;
+}
+.prj-card:hover .prj-card__overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.prj-card__overlay-inner {
+  padding: 24px 20px;
+  width: 100%;
+}
+
+.prj-card__size {
+  font-family: 'GriftMedium', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 6px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.35s ease 0.05s, transform 0.35s ease 0.05s;
+}
+.prj-card:hover .prj-card__size {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.prj-card__title {
+  font-family: 'GriftBold', serif;
+  font-size: clamp(16px, 1.5vw, 20px);
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  line-height: 1.2;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.35s ease 0.1s, transform 0.35s ease 0.1s;
+}
+.prj-card:hover .prj-card__title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.prj-card__arrow-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.35s ease 0.15s, transform 0.35s ease 0.15s;
+}
+.prj-card:hover .prj-card__arrow-row {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.prj-card__cat-tag {
+  font-family: 'GriftLight', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+}
+
+.prj-card__arrow {
+  font-size: 1rem;
+  color: var(--gold);
+  transition: transform 0.25s ease;
+}
+.prj-card:hover .prj-card__arrow {
+  transform: translateX(5px);
+}
+
+/* Bottom bar: permanent title visible by default (when not hovering) */
+.prj-card__bottom-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 100%);
+  padding: 32px 16px 14px;
+  z-index: 1;
+  transition: opacity 0.35s ease;
+}
+.prj-card:hover .prj-card__bottom-bar {
+  opacity: 0;
+}
+
+.prj-card__bottom-title {
+  font-family: 'GriftSemiBold', sans-serif;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.88);
+  letter-spacing: 0.04em;
+}
+
+/* ============================================================
+   SECTION 3 · CTA
+   ============================================================ */
+.prj-cta {
+  position: relative;
+  padding: 88px 5%;
+  text-align: center;
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.prj-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 200px;
+  background: radial-gradient(ellipse at center top, rgba(30, 53, 32, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.prj-cta__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.prj-cta__heading {
+  font-family: 'GriftBold', serif;
+  font-size: clamp(28px, 4.5vw, 58px);
+  font-weight: bold;
+  color: var(--text);
+  line-height: 1.12;
+  margin: 0 0 18px 0;
+  letter-spacing: -0.01em;
+}
+.prj-cta__heading em {
+  font-family: 'GriftBoldItalic', serif;
+  font-style: italic;
+  color: var(--green);
+}
+
+.prj-cta__desc {
+  font-family: 'GriftLight', sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+  margin: 0 0 36px 0;
+}
+
+.prj-cta__btn {
+  display: inline-block;
+  padding: 15px 40px;
+  font-family: 'GriftSemiBold', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: var(--green);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.prj-cta__btn:hover {
+  background: #2d4a2d;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(30, 53, 32, 0.28);
+  color: #ffffff;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1100px) {
+  .prj-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (max-width: 860px) {
+  .prj-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .prj-hero__stats {
+    flex-wrap: wrap;
+  }
+  .prj-hero__stat {
+    padding: 16px 20px;
+    flex: 1 1 40%;
+  }
+  .prj-hero__stat-sep:nth-child(4) {
+    display: none;
+  }
+}
+
+@media (max-width: 580px) {
+  .prj-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .prj-card {
+    aspect-ratio: 3 / 2;
+  }
+  .prj-hero__stat {
+    flex: 1 1 40%;
+  }
+  .prj-hero__heading {
+    font-size: 36px;
+  }
+}

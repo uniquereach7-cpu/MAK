@@ -1,0 +1,117 @@
+<!-- ============================================================
+     PROJECTS PAGE
+     ============================================================ -->
+<div class="prj-page">
+
+  <!-- ======================================================
+       SECTION 1 · HERO / PAGE HEADER
+       Light beige bg, subtle bg image, big heading
+       ====================================================== -->
+  <section class="prj-hero">
+    <div class="prj-hero__overlay"></div>
+    <div class="prj-hero__inner">
+
+      <div class="prj-hero__tag prj-reveal">
+        <span class="prj-tag-icon">✦</span>
+        <span>Our Portfolio</span>
+      </div>
+
+      <h1 class="prj-hero__heading prj-reveal">
+        Our Design <em>Portfolio</em>
+      </h1>
+
+      <p class="prj-hero__desc prj-reveal">
+        Crafted with precision — a curated showcase of our finest residential,
+        commercial and modular interior projects across Hyderabad.
+      </p>
+
+      <div class="prj-hero__divider prj-reveal">
+        <span></span>
+        <span class="prj-hero__divider-icon">✦</span>
+        <span></span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SECTION 2 · PORTFOLIO GRID
+       Background image + dark overlay + 3×3 grid
+       ====================================================== -->
+  <section class="prj-grid-section">
+    <div class="prj-grid-section__bg-overlay"></div>
+
+    <div class="prj-grid-section__inner">
+
+      <!-- Section label -->
+      <div class="prj-grid-label-row prj-reveal">
+        <div class="prj-label-line"></div>
+        <span class="prj-label-text">SELECT WORKS</span>
+        <div class="prj-label-line"></div>
+      </div>
+
+      <!-- 3×3 Grid -->
+      <div class="prj-grid">
+        <div
+          *ngFor="let p of projects; let i = index"
+          class="prj-card"
+          [style.--stagger]="(i % 3) * 100 + 'ms'"
+        >
+          <!-- Category badge -->
+          <div class="prj-card__badge">{{ p.category }}</div>
+
+          <!-- Image -->
+          <div class="prj-card__media">
+            <img
+              [src]="p.img"
+              [alt]="p.title"
+              class="prj-card__img"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+          <!-- Hover overlay -->
+          <div class="prj-card__overlay">
+            <div class="prj-card__overlay-inner">
+              <span class="prj-card__size">{{ p.size }}</span>
+              <h3 class="prj-card__title">{{ p.title }}</h3>
+              <div class="prj-card__arrow-row">
+                <span class="prj-card__cat-tag">{{ p.category }}</span>
+                <span class="prj-card__arrow">→</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Subtle permanent bottom gradient (title always visible) -->
+          <div class="prj-card__bottom-bar">
+            <span class="prj-card__bottom-title">{{ p.title }}</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SECTION 3 · CTA
+       Light bg, call to action
+       ====================================================== -->
+  <section class="prj-cta">
+    <div class="prj-cta__inner prj-reveal">
+      <div class="prj-section-tag prj-section-tag--center">
+        <span class="prj-tag-icon">✦</span>
+        <span>Let's Work Together</span>
+      </div>
+      <h2 class="prj-cta__heading">
+        Ready to Transform<br>Your <em>Space</em>?
+      </h2>
+      <p class="prj-cta__desc">
+        Let's create a space that tells your story. Reach out to our design team
+        and begin your journey towards a home you truly love.
+      </p>
+      <a routerLink="/contact" class="prj-cta__btn">Start Your Project</a>
+    </div>
+  </section>
+
+</div>

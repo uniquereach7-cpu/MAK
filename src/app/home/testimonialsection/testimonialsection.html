@@ -1,0 +1,46 @@
+<section id="testimonials" class="testimonial-section" aria-labelledby="testimonials-heading"
+         (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+
+  <div class="bg-overlay"></div>
+
+  <div class="inner">
+    <div class="heading">
+      <div class="kicker">TESTIMONIALS</div>
+      <h2 id="testimonials-heading" class="title">WHAT CLIENTS SAY</h2>
+    </div>
+
+    <div class="carousel" role="region" aria-roledescription="testimonial carousel" aria-live="polite">
+      <ul class="slides" role="list">
+        <li *ngFor="let t of testimonials; let i = index"
+            class="slide"
+            [class.active]="i === current"
+            [attr.aria-hidden]="i === current ? 'false' : 'true'">
+          <blockquote class="quote"> {{ t.text }} </blockquote>
+
+          <div class="author">
+            <!-- shared avatar used here for every testimonial -->
+            <div class="meta">
+              <div class="name">{{ t.name }}</div>
+              <div class="loc">{{ t.location }}</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <!-- prev/next controls -->
+      <button class="ctrl prev" (click)="prev()" aria-label="Previous testimonial">&#10094;</button>
+      <button class="ctrl next" (click)="next()" aria-label="Next testimonial">&#10095;</button>
+
+      <!-- indicators -->
+      <div class="dots" role="tablist" aria-label="Testimonials navigation">
+        <button *ngFor="let t of testimonials; let i = index"
+                class="dot" [class.active]="i === current"
+                (click)="goTo(i)"
+                role="tab"
+                [attr.aria-selected]="i === current"
+                [attr.aria-label]="'Show testimonial ' + (i+1)">
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

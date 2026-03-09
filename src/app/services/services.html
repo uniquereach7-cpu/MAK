@@ -1,0 +1,105 @@
+<!-- ============================================================
+     SERVICES PAGE
+     ============================================================ -->
+<div class="srv-page">
+
+  <!-- ======== INTRO SECTION ======== -->
+  <section class="srv-intro">
+    <div class="srv-intro__inner">
+
+      <div class="srv-intro__tag">
+        <span class="srv-tag-icon">✦</span>
+        <span>OUR EXPERTISE</span>
+      </div>
+
+      <h1 class="srv-intro__heading">
+        Transforming Spaces,<br>
+        One Detail at a <em>Time.</em>
+      </h1>
+
+      <p class="srv-intro__desc">
+        At MAK Architects &amp; Interiors, we don't just decorate — we design experiences.
+        From concept to completion, our eight pillars of expertise ensure that every corner
+        of your space is crafted with intention, precision, and an unwavering eye for beauty.
+      </p>
+
+      <div class="srv-intro__divider">
+        <span></span><span class="srv-intro__divider-icon">✦</span><span></span>
+      </div>
+    </div>
+
+    <!-- Stats strip -->
+    <div class="srv-stats">
+      <div class="srv-stats__item">
+        <span class="srv-stats__number">8</span>
+        <span class="srv-stats__label">Design Services</span>
+      </div>
+      <div class="srv-stats__sep"></div>
+      <div class="srv-stats__item">
+        <span class="srv-stats__number">200+</span>
+        <span class="srv-stats__label">Projects Completed</span>
+      </div>
+      <div class="srv-stats__sep"></div>
+      <div class="srv-stats__item">
+        <span class="srv-stats__number">10+</span>
+        <span class="srv-stats__label">Years of Excellence</span>
+      </div>
+      <div class="srv-stats__sep"></div>
+      <div class="srv-stats__item">
+        <span class="srv-stats__number">100%</span>
+        <span class="srv-stats__label">Client Satisfaction</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SERVICES GRID ======== -->
+  <section class="srv-grid-section">
+    <div class="srv-grid">
+      <article
+        *ngFor="let service of services; let i = index"
+        #serviceCard
+        class="srv-card"
+        [attr.data-index]="i"
+      >
+        <!-- Image -->
+        <div class="srv-card__media">
+          <img [src]="service.image" [alt]="service.title" class="srv-card__img" />
+          <div class="srv-card__media-overlay"></div>
+          <span class="srv-card__tag">{{ service.tag }}</span>
+        </div>
+
+        <!-- Content -->
+        <div class="srv-card__body">
+          <div class="srv-card__top-row">
+            <span class="srv-card__number">{{ service.id }}</span>
+            <span class="srv-card__icon">{{ service.icon }}</span>
+          </div>
+          <h2 class="srv-card__title">{{ service.title }}</h2>
+          <p class="srv-card__short">{{ service.shortDesc }}</p>
+          <p class="srv-card__desc">{{ service.fullDesc }}</p>
+          <a routerLink="/contact" class="srv-card__link">
+            Explore Service
+            <span class="srv-card__arrow">→</span>
+          </a>
+        </div>
+
+        <!-- Glow border effect -->
+        <div class="srv-card__glow"></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ======== BOTTOM CTA STRIP ======== -->
+  <section class="srv-cta">
+    <div class="srv-cta__inner">
+      <p class="srv-cta__kicker">Ready to Begin?</p>
+      <h2 class="srv-cta__heading">Let's Build Your <em>Dream Space</em> Together</h2>
+      <p class="srv-cta__desc">
+        Every great interior starts with a conversation. Tell us about your vision and
+        let our team of expert designers bring it to life.
+      </p>
+      <a routerLink="/contact" class="srv-cta__btn">Get in Touch ↗</a>
+    </div>
+  </section>
+
+</div>

@@ -1,0 +1,31 @@
+<section class="hero-container">
+  
+  <div
+    *ngFor="let img of images; let i = index"
+    class="hero-slide"
+    [ngClass]="{ 'active': i === currentIndex }"
+    [style.backgroundImage]="'url(' + img + ')'"
+  ></div>
+  
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    
+    <div class="subtitle">INTERIOR DESIGN STUDIO</div>
+    
+    <h1 class="main-title">
+      Crafting <span class="highlight">Timeless</span><br>
+      Spaces
+    </h1>
+    
+    <p class="description">
+      We transform ordinary spaces into extraordinary experiences through thoughtful design, premium materials, and meticulous craftsmanship.
+    </p>
+
+    <div class="cta-buttons">
+      <button class="btn btn-primary">VIEW OUR WORK</button>
+      <button class="btn btn-secondary">GET IN TOUCH</button>
+    </div>
+
+  </div>
+</section>

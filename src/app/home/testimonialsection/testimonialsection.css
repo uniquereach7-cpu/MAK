@@ -1,0 +1,221 @@
+/* load Grift (adjust path if needed) */
+@font-face {
+  font-family: 'Grift';
+  src: url('/assets/fonts/Grift.woff2') format('woff2');
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* base */
+.testimonial-section {
+  position: relative;
+  max-height: 480px;
+  color: #fff;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* top glow effect for continuity */
+.testimonial-section::after {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: radial-gradient(ellipse at center top, rgba(201, 156, 67, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* background image (reference-style) */
+.testimonial-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/hero4.jpg');
+  background-size: cover;
+  background-position: center center;
+  filter: saturate(0.8) contrast(0.9);
+  z-index: 0;
+}
+
+/* dark overlay so text is readable */
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10,10,10,0.45) 0%, rgba(10,10,10,0.88) 75%);
+  z-index: 1;
+}
+
+/* container */
+.inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1100px;
+  padding: 48px 22px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* heading */
+.kicker {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.title {
+  font-family: 'Grift', Georgia, serif;
+  font-size: 56px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 6px 0 24px;
+  color: #c99c43;
+  font-weight: 600;
+}
+
+/* carousel */
+.carousel {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* slides container and slide behavior */
+.slides {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 260px;
+}
+
+/* each slide absolute stacked */
+.slide {
+  position: absolute;
+  inset: 0 0 auto 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 520ms ease, transform 520ms ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateY(0);
+  position: relative;
+}
+
+/* quote box */
+.quote {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: 'Montserrat', system-ui, sans-serif;
+  color: rgba(255,255,255,0.95);
+  padding: 8px 18px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* author area */
+.author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 18px;
+  justify-content: center;
+}
+.avatar {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.12);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+.meta .name {
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+}
+.meta .loc {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.72);
+  margin-top: 4px;
+}
+
+/* controls */
+.ctrl {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+  transition: background 180ms, transform 140ms;
+}
+.ctrl:hover { background: rgba(0,0,0,0.55); transform: translateY(-50%) scale(1.04); }
+.ctrl.prev { left: 8px; }
+.ctrl.next { right: 8px; }
+
+/* dots */
+.dots {
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  margin-top:2px;
+}
+.dot {
+  width:12px;
+  height:12px;
+  background: rgba(255,255,255,0.18);
+  border-radius:50%;
+  border:none;
+  cursor:pointer;
+  transition: transform .18s, background .18s;
+}
+.dot.active {
+  background: #eec08a;
+  transform: scale(1.18);
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+  .title { font-size: 48px; letter-spacing: 1.6px; }
+}
+
+@media (max-width: 900px) {
+  .title { font-size: 40px; letter-spacing: 1.2px; }
+  .slides { height: auto; padding: 10px 0 40px; }
+  .quote { font-size: 18px; padding: 6px 12px; }
+  .ctrl { width: 36px; height: 36px; font-size: 18px; }
+}
+
+@media (max-width: 480px) {
+  .title { font-size: 32px; letter-spacing: 1px; }
+  .quote { font-size: 16px; line-height: 1.5; }
+  .avatar { width:48px; height:48px; }
+}

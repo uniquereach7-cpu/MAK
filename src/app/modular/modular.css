@@ -1,0 +1,529 @@
+/* ============================================================
+   GRIFT FONT DECLARATIONS
+   ============================================================ */
+@font-face {
+  font-family: 'GriftBold';
+  src: url('/assets/fonts/grift-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GriftBoldItalic';
+  src: url('/assets/fonts/grift-bolditalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GriftRegular';
+  src: url('/assets/fonts/grift-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GriftMedium';
+  src: url('/assets/fonts/grift-medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GriftLight';
+  src: url('/assets/fonts/grift-light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+.mod-page {
+  --mod-bg:          #ede8df;
+  --mod-bg-alt:      #f3efe8;
+  --mod-green-dark:  #1e3520;
+  --mod-green-mid:   #2d4a2d;
+  --mod-text:        #1a1a1a;
+  --mod-text-muted:  #7a7570;
+  --mod-border:      #d8d0c5;
+  --mod-tag-color:   #8a8078;
+
+  background-color: var(--mod-bg);
+  font-family: 'GriftRegular', sans-serif;
+  color: var(--mod-text);
+  padding-top: 100px; /* offset for fixed header */
+}
+
+/* ============================================================
+   SHARED UTILITIES
+   ============================================================ */
+.mod-section-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'GriftMedium', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--mod-tag-color);
+  margin-bottom: 14px;
+}
+.mod-section-tag--center {
+  justify-content: center;
+}
+.mod-tag-icon {
+  font-size: 0.65rem;
+  color: var(--mod-tag-color);
+}
+.mod-link-arrow {
+  display: inline-block;
+  margin-left: 4px;
+}
+.mod-text-link {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'GriftMedium', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mod-green-dark);
+  text-decoration: none;
+  border-bottom: 1px solid var(--mod-green-dark);
+  padding-bottom: 1px;
+  transition: opacity 0.2s ease;
+}
+.mod-text-link:hover {
+  opacity: 0.65;
+}
+
+/* ============================================================
+   SECTION 1: HERO
+   ============================================================ */
+.mod-hero {
+  padding: 40px 5% 0;
+}
+
+/* Top row: heading + info */
+.mod-hero__top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  gap: 24px;
+}
+
+.mod-hero__heading-col {
+  flex: 0 0 auto;
+}
+
+.mod-hero__title {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: 'GriftBoldItalic', serif;
+  font-size: clamp(52px, 7vw, 96px);
+  font-weight: bold;
+  font-style: italic;
+  line-height: 0.95;
+  color: var(--mod-green-dark);
+  letter-spacing: -0.01em;
+}
+
+.mod-hero__title-line {
+  display: block;
+}
+
+.mod-hero__info-col {
+  flex: 0 0 auto;
+  max-width: 320px;
+  text-align: right;
+  padding-bottom: 6px;
+}
+
+.mod-hero__subtitle {
+  font-family: 'GriftRegular', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--mod-text);
+  margin: 0 0 18px 0;
+}
+
+.mod-hero__explore-link {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'GriftMedium', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mod-green-dark);
+  text-decoration: none;
+  border-bottom: 1px solid var(--mod-green-dark);
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+.mod-hero__explore-link:hover {
+  opacity: 0.6;
+}
+
+/* Full-width hero image */
+.mod-hero__image-wrap {
+  width: 100%;
+  height: clamp(260px, 35vw, 440px);
+  overflow: hidden;
+  border-radius: 4px;
+}
+.mod-hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  display: block;
+}
+
+/* ============================================================
+   SECTION 2: ABOUT + WHY CHOOSE US
+   ============================================================ */
+.mod-about {
+  display: flex;
+  align-items: stretch;
+  padding: 56px 5% 0;
+  gap: 0;
+}
+
+/* Left area: 65% wide, flex column */
+.mod-about__left-area {
+  flex: 0 0 65%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 32px;
+}
+
+/* Top row inside left area: narrow image + text */
+.mod-about__top-row {
+  display: flex;
+  align-items: stretch;
+  gap: 32px;
+  flex: 1;
+}
+
+/* Narrow side image */
+.mod-about__side-image {
+  flex: 0 0 38%;
+  overflow: hidden;
+  border-radius: 4px;
+  max-height: 400px;
+}
+.mod-about__side-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* About text content */
+.mod-about__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.mod-about__heading {
+  font-family: 'GriftBold', serif;
+  font-size: clamp(22px, 2.4vw, 32px);
+  font-weight: bold;
+  color: var(--mod-green-dark);
+  line-height: 1.2;
+  margin: 0 0 18px 0;
+}
+
+.mod-about__desc {
+  font-family: 'GriftLight', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--mod-text-muted);
+  margin: 0 0 24px 0;
+}
+
+/* Why Choose Us section */
+.mod-why {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--mod-border);
+}
+
+.mod-why__heading {
+  font-family: 'GriftBold', serif;
+  font-size: clamp(18px, 2vw, 26px);
+  font-weight: bold;
+  color: var(--mod-green-dark);
+  margin: 0 0 24px 0;
+}
+
+.mod-why__features {
+  display: flex;
+  gap: 40px;
+}
+
+.mod-why__feature {
+  flex: 1;
+}
+
+.mod-why__feature-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.mod-why__feature-title {
+  font-family: 'GriftMedium', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--mod-text);
+  margin: 0;
+}
+
+.mod-why__icon {
+  color: var(--mod-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+}
+
+.mod-why__feature-desc {
+  font-family: 'GriftLight', sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--mod-text-muted);
+  margin: 0;
+}
+
+/* Right tall image */
+.mod-about__right-image {
+  flex: 0 0 35%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.mod-about__right-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  min-height: 480px;
+}
+
+/* ============================================================
+   SECTION 3: SERVICES
+   ============================================================ */
+.mod-services {
+  padding: 72px 5% 80px;
+}
+
+.mod-services__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.mod-services__heading {
+  font-family: 'GriftBold', serif;
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: bold;
+  color: var(--mod-green-dark);
+  margin: 0 0 14px 0;
+}
+
+.mod-services__subtitle {
+  font-family: 'GriftLight', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--mod-text-muted);
+  margin: 0;
+}
+
+/* Body: tabs + panel */
+.mod-services__body {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+/* Tab List */
+.mod-services__tabs {
+  flex: 0 0 22%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mod-tab {
+  display: block;
+  width: 100%;
+  padding: 14px 18px;
+  text-align: left;
+  font-family: 'GriftMedium', sans-serif;
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
+  color: var(--mod-text);
+  background-color: var(--mod-bg-alt);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+.mod-tab:hover:not(.mod-tab--active) {
+  background-color: #e0d9cf;
+}
+.mod-tab--active {
+  background-color: var(--mod-green-dark);
+  color: #ffffff;
+  font-family: 'GriftBold', sans-serif;
+}
+
+/* Content Panel */
+.mod-services__panel {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  gap: 32px;
+}
+
+/* Service image */
+.mod-services__image-wrap {
+  flex: 0 0 42%;
+  overflow: hidden;
+  border-radius: 4px;
+  max-height: 360px;
+}
+.mod-services__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+/* Service text */
+.mod-services__text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px 0;
+}
+
+.mod-services__title {
+  font-family: 'GriftBold', serif;
+  font-size: clamp(20px, 2.2vw, 30px);
+  font-weight: bold;
+  color: var(--mod-green-dark);
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+.mod-services__title em {
+  font-family: 'GriftBoldItalic', serif;
+  font-style: italic;
+}
+
+.mod-services__sub {
+  font-family: 'GriftRegular', sans-serif;
+  font-size: 1rem;
+  color: var(--mod-green-dark);
+  margin: 0 0 16px 0;
+}
+
+.mod-services__desc {
+  font-family: 'GriftLight', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--mod-text-muted);
+  margin: 0 0 20px 0;
+}
+
+.mod-services__highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.mod-services__highlight-icon {
+  flex-shrink: 0;
+  color: var(--mod-green-mid);
+  margin-top: 1px;
+}
+.mod-services__highlight span:last-child {
+  font-family: 'GriftMedium', sans-serif;
+  font-size: 0.83rem;
+  line-height: 1.5;
+  color: var(--mod-text);
+}
+
+.mod-services__link {
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  .mod-hero__top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mod-hero__info-col {
+    text-align: left;
+  }
+  .mod-about {
+    flex-direction: column;
+    padding: 40px 5% 0;
+  }
+  .mod-about__left-area {
+    flex: none;
+    padding-right: 0;
+    margin-bottom: 24px;
+  }
+  .mod-about__right-image {
+    flex: none;
+    width: 100%;
+    height: 300px;
+  }
+  .mod-services__body {
+    flex-direction: column;
+  }
+  .mod-services__tabs {
+    flex: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .mod-tab {
+    flex: 1 1 auto;
+    min-width: 140px;
+  }
+  .mod-services__panel {
+    flex-direction: column;
+  }
+  .mod-services__image-wrap {
+    flex: none;
+    width: 100%;
+    max-height: 260px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mod-about__top-row {
+    flex-direction: column;
+  }
+  .mod-about__side-image {
+    flex: none;
+    width: 100%;
+    max-height: 240px;
+  }
+  .mod-why__features {
+    flex-direction: column;
+    gap: 24px;
+  }
+}

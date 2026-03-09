@@ -1,0 +1,22 @@
+<section class="projects-section" aria-labelledby="projects-heading">
+  <div class="container">
+    <h2 id="projects-heading" class="section-title">OUR PROJECTS</h2>
+    <p class="section-sub">Selected works showcasing MAK Interiors — modular & custom interiors</p>
+
+    <ul class="projects-grid" role="list">
+      <li *ngFor="let p of projects" class="project-item" role="listitem">
+        <a class="project-link" [href]="p.href || '#'" [attr.aria-label]="'Open project: ' + p.title">
+          <div class="project-media" aria-hidden="true">
+            <img [src]="p.img" [alt]="p.title" loading="lazy" decoding="async" />
+          </div>
+
+          <div class="overlay">
+            <div class="overlay-inner">
+              <span class="project-title">{{ p.title }}</span>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>

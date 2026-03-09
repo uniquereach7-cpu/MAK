@@ -1,0 +1,35 @@
+<section class="process-section" aria-labelledby="process-title"
+         style="--bg-url: url('assets/hero4.jpg')">
+
+  <div class="process-wrap">
+    <h2 id="process-title" class="process-title">OUR PROCESS</h2>
+    <p class="process-sub">A focused approach to design — clear, confident, and collaborative</p>
+
+    <div class="steps-grid" role="list">
+      <article *ngFor="let s of steps; let i = index"
+               role="listitem"
+               class="step-card"
+               [attr.data-index]="i">
+
+        <div class="card-illustration" aria-hidden="true">
+          <!-- optional decorative illustration behind text (replace path if needed) -->
+          <img [src]="s.icon" alt="" class="card-ill-img" *ngIf="s.icon"/>
+        </div>
+
+        <div class="card-body">
+          <div class="card-meta">
+            <div class="card-id">{{ s.id }}</div>
+            <h3 class="card-title">{{ s.title }}</h3>
+          </div>
+
+          <p class="card-sub">{{ s.subtitle }}</p>
+
+          <div class="card-footer" aria-hidden="true">
+            <span class="connector-line"></span>
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </div>
+</section>

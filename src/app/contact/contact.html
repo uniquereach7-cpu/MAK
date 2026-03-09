@@ -1,0 +1,253 @@
+<!-- ============================================================
+     CONTACT PAGE
+     ============================================================ -->
+<div class="ctn-page">
+
+  <!-- ======================================================
+       SECTION 1 · HERO
+       ====================================================== -->
+  <!-- <section class="ctn-hero">
+    <div class="ctn-hero__overlay"></div>
+    <div class="ctn-hero__inner">
+
+      <div class="ctn-hero__tag ctn-reveal">
+        <span class="ctn-tag-icon">✦</span>
+        <span>Get in Touch</span>
+      </div>
+
+      <h1 class="ctn-hero__heading ctn-reveal">
+        Contact <em>Us</em>
+      </h1>
+
+      <p class="ctn-hero__desc ctn-reveal">
+        We'd love to hear about your project. Fill in the details and our team
+        will get back to you within 24 hours.
+      </p>
+
+      <div class="ctn-hero__divider ctn-reveal">
+        <span></span>
+        <span class="ctn-hero__divider-icon">✦</span>
+        <span></span>
+      </div>
+
+    </div>
+  </section> -->
+
+  <!-- ======================================================
+       SECTION 2 · FORM + IMAGE
+       ====================================================== -->
+  <section class="ctn-form-section">
+    <div class="ctn-form-section__inner">
+
+      <!-- LEFT · Form -->
+      <div class="ctn-form-col ctn-reveal">
+        <div class="ctn-form-header">
+          <div class="ctn-section-tag">
+            <span class="ctn-tag-icon">✦</span>
+            <span>Book a Consultation</span>
+          </div>
+          <h2 class="ctn-form-title">Let's Build Your<br><em>Dream Space</em></h2>
+        </div>
+
+        <form class="ctn-form" (ngSubmit)="onSubmit()" #contactForm="ngForm" novalidate>
+
+          <!-- Row 1: Name + Email -->
+          <div class="ctn-form-row">
+            <div class="ctn-field">
+              <label class="ctn-label" for="ctn-name">Name</label>
+              <input
+                id="ctn-name"
+                class="ctn-input"
+                type="text"
+                name="name"
+                placeholder="Your full name"
+                [(ngModel)]="formData.name"
+                required
+              />
+            </div>
+            <div class="ctn-field">
+              <label class="ctn-label" for="ctn-email">Email</label>
+              <input
+                id="ctn-email"
+                class="ctn-input"
+                type="email"
+                name="email"
+                placeholder="you&#64;example.com"
+                [(ngModel)]="formData.email"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Row 2: Phone + Service -->
+          <div class="ctn-form-row">
+            <div class="ctn-field">
+              <label class="ctn-label" for="ctn-phone">Phone Number</label>
+              <input
+                id="ctn-phone"
+                class="ctn-input"
+                type="tel"
+                name="phone"
+                placeholder="+91 98765 43210"
+                [(ngModel)]="formData.phone"
+                required
+              />
+            </div>
+            <div class="ctn-field">
+              <label class="ctn-label" for="ctn-service">Service Required</label>
+              <div class="ctn-select-wrap">
+                <select
+                  id="ctn-service"
+                  class="ctn-select"
+                  name="service"
+                  [(ngModel)]="formData.service"
+                  required
+                >
+                  <option value="" disabled selected>Choose a service...</option>
+                  <option value="residential">Residential Interior Design</option>
+                  <option value="commercial">Commercial Interior Design</option>
+                  <option value="modular">Modular Kitchen &amp; Wardrobe</option>
+                  <option value="planning">Space Planning &amp; Consultation</option>
+                  <option value="3d">3D Visualization &amp; Rendering</option>
+                  <option value="full">Full Home Interior</option>
+                </select>
+                <span class="ctn-select-arrow">›</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="ctn-field ctn-field--full">
+            <label class="ctn-label" for="ctn-message">Message / Special Requests</label>
+            <textarea
+              id="ctn-message"
+              class="ctn-textarea"
+              name="message"
+              placeholder="Anything else we should know?"
+              rows="5"
+              [(ngModel)]="formData.message"
+            ></textarea>
+          </div>
+
+          <!-- Submit -->
+          <div class="ctn-submit-row">
+            <button type="submit" class="ctn-submit-btn">
+              Send Your Message
+              <span class="ctn-submit-arrow">↗</span>
+            </button>
+            <p class="ctn-submit-note" *ngIf="submitted">
+              ✦ Thank you! We'll be in touch shortly.
+            </p>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- RIGHT · Image panel -->
+      <div class="ctn-img-col ctn-reveal">
+        <div class="ctn-img-frame">
+          <img
+            src="assets/hero2.jpg"
+            alt="MAK Interior Design project"
+            class="ctn-hero-img"
+            loading="lazy"
+          />
+          <div class="ctn-img-badge">
+            <span class="ctn-img-badge-sub">Your</span>
+            <span class="ctn-img-badge-main">Project</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SECTION 3 · CONTACT INFO STRIP
+       ====================================================== -->
+  <section class="ctn-info-section">
+    <div class="ctn-info-inner">
+
+      <!-- Card 1: Call & WhatsApp -->
+      <div class="ctn-info-card ctn-reveal">
+        <span class="ctn-info-icon">📞</span>
+        <h3 class="ctn-info-title">Call &amp; WhatsApp</h3>
+        <a href="tel:+918801039869" class="ctn-info-link">+91 - 8801039869</a>
+        <a href="tel:+918801039858" class="ctn-info-link">+91 - 8801039858</a>
+      </div>
+
+      <!-- Card 2: Write to Us -->
+      <div class="ctn-info-card ctn-reveal">
+        <span class="ctn-info-icon">✉️</span>
+        <h3 class="ctn-info-title">Write to Us</h3>
+        <a href="mailto:info@makinteriors.com" class="ctn-info-link">info&#64;makinteriors.com</a>
+      </div>
+
+      <!-- Card 3: Our Location -->
+      <div class="ctn-info-card ctn-reveal">
+        <span class="ctn-info-icon">📍</span>
+        <h3 class="ctn-info-title">Our Location</h3>
+        <a
+          href="https://www.google.com/maps?q=Narsingi+Hyderabad"
+          target="_blank"
+          rel="noopener"
+          class="ctn-info-link ctn-info-link--addr"
+        >
+          Plot No: 12 Khanapur, Gandipet,<br>Hyderabad - 504203
+        </a>
+        <a
+          href="https://www.google.com/maps?q=Narsingi+Hyderabad"
+          target="_blank"
+          rel="noopener"
+          class="ctn-info-link ctn-info-link--addr"
+        >
+          Flat no 203, Sree Ramararam Bldg,<br>Narsingi - 500075
+        </a>
+      </div>
+
+      <!-- Card 4: Working Hours -->
+      <div class="ctn-info-card ctn-reveal">
+        <span class="ctn-info-icon">🕐</span>
+        <h3 class="ctn-info-title">Working Hours</h3>
+        <p class="ctn-info-text">Mon – Sat: 9am – 6pm</p>
+        <p class="ctn-info-text">Sunday: Closed</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SECTION 4 · MAP
+       ====================================================== -->
+  <section class="ctn-map-section">
+    <div class="ctn-map-header ctn-reveal">
+      <div class="ctn-section-tag ctn-section-tag--center">
+        <span class="ctn-tag-icon">✦</span>
+        <span>Find Us</span>
+      </div>
+      <h2 class="ctn-map-title">Visit Our <em>Studio</em></h2>
+    </div>
+
+    <div class="ctn-map-wrap">
+      <!-- Clickable overlay button -->
+      <a
+        href="https://www.google.com/maps?q=Narsingi+Hyderabad"
+        target="_blank"
+        rel="noopener"
+        class="ctn-map-open-btn"
+        title="Open in Google Maps"
+      >
+        Open in Google Maps &nbsp;↗
+      </a>
+
+      <iframe
+        class="ctn-map-iframe"
+        src="https://www.google.com/maps?q=Narsingi%20Hyderabad&output=embed"
+        loading="lazy"
+        allowfullscreen
+        title="MAK Interior Design Location"
+      ></iframe>
+    </div>
+  </section>
+
+</div>

@@ -1,0 +1,152 @@
+/* --- THE CONTAINER --- */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 90vh; 
+  /* Important: no margins here so it sits flush with the screen */
+  background-color: #050505;
+  overflow: hidden; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Push text down slightly to account for the fixed navbar */
+  padding-top: 80px; 
+}
+
+/* --- THE BACKGROUND SLIDER --- */
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  opacity: 0; 
+  transform: scale(1); 
+  
+  /* Reset transition when hidden */
+  transition: opacity 1.5s ease-in-out, transform 0s 1.5s; 
+  z-index: 1;
+}
+
+.hero-slide.active {
+  opacity: 1; 
+  /* Zooms in continuously while visible */
+  transform: scale(1.1); 
+  
+  /* Fade in smoothly, zoom slowly over 8 seconds */
+  transition: opacity 1.5s ease-in-out, transform 8s linear; 
+  z-index: 2;
+}
+
+/* --- THE OVERLAY --- */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Creates a vignette and darkens the center for text readability */
+  background: radial-gradient(circle at center, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%);
+  z-index: 3;
+}
+
+/* --- THE CONTENT --- */
+.hero-content {
+  position: relative;
+  z-index: 4; /* Sits above the overlay */
+  text-align: center;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 6px;
+  color: #c99c43; /* Pale gold */
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+/* Base font for the title should be a clean serif, 
+   or Poppins depending on your preference. 
+   The image uses a serif font for the main title. */
+.main-title {
+  font-family: 'Times New Roman', Times, serif; /* Fallback for a classic look */
+  font-size: 6.5rem;
+  font-weight: 300; /* Thin weight */
+  line-height: 1.1;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+}
+
+/* Grift font applied specifically to the highlight word */
+.highlight {
+  font-family: 'Grift', serif;
+  font-style: italic; 
+  color: #d19f3a; /* Rich gold */
+}
+
+.description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #dcdcdc; /* Light grey */
+  margin: 0 auto 10px auto;
+  max-width: 700px;
+}
+
+/* --- CTA BUTTONS --- */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  padding: 16px 40px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #d19f3a;
+  color: #1a1a1a;
+  border: 1px solid #d19f3a;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: #d19f3a;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn-secondary:hover {
+  border-color: #ffffff;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 4rem;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
