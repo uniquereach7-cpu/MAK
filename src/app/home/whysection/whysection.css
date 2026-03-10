@@ -22,7 +22,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 15px;
   align-items: start;
 }
 
@@ -81,7 +81,7 @@
 .right{
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 10px;
   height: 600px;
   justify-content: center;
 }
@@ -101,7 +101,7 @@
 .features{
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 30px;
 }
 
 /* EACH FEATURE */
@@ -147,7 +147,7 @@
   font-size: 14px;
   color: white;
   line-height: 1.6;
-  margin: 4px 0 0;
+  margin: 1px 0 0;
 }
 
 /* RESPONSIVE */

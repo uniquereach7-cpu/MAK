@@ -14,19 +14,19 @@
   font-style: italic;
 }
 @font-face {
-  font-family: 'GriftRegular';
+  font-family: 'Poppins', sans-serif; font-weight: 400;
   src: url('/assets/fonts/grift-regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'GriftMedium';
+  font-family: 'Poppins', sans-serif; font-weight: 500;
   src: url('/assets/fonts/grift-medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: 'GriftLight';
+  font-family: 'Poppins', sans-serif; font-weight: 300;
   src: url('/assets/fonts/grift-light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
@@ -46,7 +46,7 @@
   --mod-tag-color:   #8a8078;
 
   background-color: var(--mod-bg);
-  font-family: 'GriftRegular', sans-serif;
+  font-family: 'Poppins', sans-serif; font-weight: 400;
   color: var(--mod-text);
   padding-top: 100px; /* offset for fixed header */
 }
@@ -58,7 +58,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-family: 'GriftMedium', sans-serif;
+  font-family: 'Poppins', sans-serif; font-weight: 500;
   font-size: 0.7rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -79,7 +79,7 @@
 .mod-text-link {
   display: inline-flex;
   align-items: center;
-  font-family: 'GriftMedium', sans-serif;
+  font-family: 'Poppins', sans-serif; font-weight: 500;
   font-size: 0.78rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -138,7 +138,7 @@
 }
 
 .mod-hero__subtitle {
-  font-family: 'GriftRegular', sans-serif;
+  font-family: 'Poppins', sans-serif; font-weight: 400;
   font-size: 0.88rem;
   line-height: 1.55;
   color: var(--mod-text);
@@ -148,7 +148,7 @@
 .mod-hero__explore-link {
   display: inline-flex;
   align-items: center;
-  font-family: 'GriftMedium', sans-serif;
+  font-family: 'Poppins', sans-serif; font-weight: 500;
   font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -237,7 +237,7 @@
 }
 
 .mod-about__desc {
-  font-family: 'GriftLight', sans-serif;
+  font-family: 'Poppins', sans-serif; font-weight: 300;
   font-size: 0.85rem;
   line-height: 1.7;
   color: var(--mod-text-muted);
@@ -276,7 +276,7 @@
 }
 
 .mod-why__feature-title {
-  font-family: 'GriftMedium', sans-serif;
+  font-family: 'Poppins', sans-serif; font-weight: 500;
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--mod-text);
@@ -292,7 +292,7 @@
 }
 
 .mod-why__feature-desc {
-  font-family: 'GriftLight', sans-serif;
+  font-family: 'Poppins', sans-serif; font-weight: 300;
   font-size: 0.82rem;
   line-height: 1.6;
   color: var(--mod-text-muted);
@@ -335,7 +335,7 @@
 }
 
 .mod-services__subtitle {
-  font-family: 'GriftLight', sans-serif;
+  font-family: 'Poppins', sans-serif; font-weight: 300;
   font-size: 0.88rem;
   line-height: 1.65;
   color: var(--mod-text-muted);
@@ -362,7 +362,7 @@
   width: 100%;
   padding: 14px 18px;
   text-align: left;
-  font-family: 'GriftMedium', sans-serif;
+  font-family: 'Poppins', sans-serif; font-weight: 500;
   font-size: 0.88rem;
   letter-spacing: 0.02em;
   color: var(--mod-text);
@@ -378,7 +378,7 @@
 .mod-tab--active {
   background-color: var(--mod-green-dark);
   color: #ffffff;
-  font-family: 'GriftBold', sans-serif;
+  font-family: 'poppins', sans-serif;
 }
 
 /* Content Panel */
@@ -423,19 +423,19 @@
   line-height: 1.2;
 }
 .mod-services__title em {
-  font-family: 'GriftBoldItalic', serif;
-  font-style: italic;
+  font-family: 'poppins', sans-serif;
+  /* font-style: italic; */
 }
 
 .mod-services__sub {
-  font-family: 'GriftRegular', sans-serif;
+  font-family: 'Poppins', sans-serif; font-weight: 400;
   font-size: 1rem;
   color: var(--mod-green-dark);
   margin: 0 0 16px 0;
 }
 
 .mod-services__desc {
-  font-family: 'GriftLight', sans-serif;
+  font-family: 'Poppins', sans-serif; font-weight: 300;
   font-size: 0.85rem;
   line-height: 1.7;
   color: var(--mod-text-muted);
@@ -454,7 +454,7 @@
   margin-top: 1px;
 }
 .mod-services__highlight span:last-child {
-  font-family: 'GriftMedium', sans-serif;
+  font-family: 'Poppins', sans-serif; font-weight: 500;
   font-size: 0.83rem;
   line-height: 1.5;
   color: var(--mod-text);

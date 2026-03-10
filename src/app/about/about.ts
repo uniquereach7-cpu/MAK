@@ -38,7 +38,7 @@ export class About implements AfterViewInit {
     },
     {
       icon: '🏗',
-      title: 'Expert Multidisciplinary Team',
+      title: 'Expert Team',
       desc: 'Architects, interior designers, 3D visualizers, draftsmen, project managers and site supervisors — all under one roof.',
     },
     {

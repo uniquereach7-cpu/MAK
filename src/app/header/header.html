@@ -1,16 +1,47 @@
 <header class="navbar">
-  <a routerLink="/home" class="logo-container">
+  <a routerLink="/home" class="logo-container" (click)="closeMenu()">
     <img src="assets/logo.png" alt="MAK Architects and Interiors Logo">
   </a>
 
-  <nav>
+  <!-- Desktop nav -->
+  <nav class="desktop-nav">
     <ul>
       <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-       <li><a routerLink="/modular" routerLinkActive="active">Modular</a></li>
+      <li><a routerLink="/modular" routerLinkActive="active">Modular</a></li>
       <li><a routerLink="/services" routerLinkActive="active">Services</a></li>
       <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
-      <li><a routerLink="/home" fragment="testimonials" routerLinkActive="active">Testimonials</a></li>
+      <li><a routerLink="/home" fragment="testimonials">Testimonials</a></li>
       <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
     </ul>
   </nav>
+
+  <!-- Hamburger button -->
+  <button
+    class="hamburger"
+    [class.is-open]="menuOpen"
+    (click)="toggleMenu()"
+    aria-label="Toggle navigation menu"
+    [attr.aria-expanded]="menuOpen"
+  >
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
 </header>
+
+<!-- Mobile overlay menu -->
+<div class="mobile-menu" [class.is-open]="menuOpen">
+  <nav>
+    <ul>
+      <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
+      <li><a routerLink="/modular" routerLinkActive="active" (click)="closeMenu()">Modular</a></li>
+      <li><a routerLink="/services" routerLinkActive="active" (click)="closeMenu()">Services</a></li>
+      <li><a routerLink="/projects" routerLinkActive="active" (click)="closeMenu()">Projects</a></li>
+      <li><a (click)="navigateToTestimonials()" class="mobile-link">Testimonials</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+
+<!-- Backdrop -->
+<div class="mobile-backdrop" [class.is-open]="menuOpen" (click)="closeMenu()"></div>

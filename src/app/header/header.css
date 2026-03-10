@@ -1,5 +1,6 @@
-/* Import custom Grift font */
-/* Ensure the font files are in your src/assets/fonts/ folder */
+/* ============================================================
+   FONT DECLARATION
+   ============================================================ */
 @font-face {
   font-family: 'Grift';
   src: url('/assets/fonts/Grift-Bold.woff2') format('woff2'),
@@ -8,73 +9,226 @@
   font-style: normal;
 }
 
+/* ============================================================
+   NAVBAR
+   ============================================================ */
 .navbar {
-  /* Use a solid, semi-transparent color for the glossy effect */
-  background-color: rgba(10, 10, 10, 0.75); /* Dark and see-through */
-
-  /* This creates the "glossy" or "glass" blur effect */
-  backdrop-filter: blur(15px); 
-  -webkit-backdrop-filter: blur(15px); /* For Safari support */
-
-  /* A subtle border to define the bottom edge of the glass header */
+  background-color: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  
-  /* Position: fixed to float over your background image */
-  position: fixed; 
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; 
-  
-  height: 100px; /* Adjust height as needed */
-  padding: 0 5%; 
-  
-  /* Flexbox for layout */
+  z-index: 1000;
+  height: 100px;
+  padding: 0 5%;
   display: flex;
   align-items: center;
-  /* Pushes the logo to the left and nav links to the right */
-  justify-content: space-between; 
-  
+  justify-content: space-between;
   box-sizing: border-box;
-  font-family: 'Grift', sans-serif; 
+  font-family: 'Grift', sans-serif;
 }
 
-/*--- LOGO STYLES ---*/
+/* ============================================================
+   LOGO
+   ============================================================ */
 .logo-container {
   display: flex;
   align-items: center;
   height: 100%;
   text-decoration: none;
+  z-index: 1100;
 }
 
 .logo-container img {
-  /* Adjust the height to fit your logo perfectly */
-  max-height: 80px; 
-  width: auto; 
+  max-height: 70px;
+  width: auto;
 }
 
-/*--- NAVIGATION LINKS ---*/
-.navbar nav ul {
-  list-style-type: none;
+/* ============================================================
+   DESKTOP NAV
+   ============================================================ */
+.desktop-nav ul {
+  list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   align-items: center;
-  gap: 35px; /* Spacing between links */
+  gap: 35px;
 }
 
-.navbar nav ul li a {
+.desktop-nav ul li a {
   text-decoration: none;
-  color: #ffffff; /* Default white text */
+  color: #ffffff;
   font-size: 16px;
-  font-weight: normal; 
+  font-weight: normal;
   letter-spacing: 0.5px;
   cursor: pointer;
-  transition: color 0.3s ease-in-out; 
+  transition: color 0.3s ease;
 }
 
-/* Active and Hover States */
-.navbar nav ul li a:hover,
-.navbar nav ul li a.active {
-  color: #e5b33f; /* The gold/yellow color */
+.desktop-nav ul li a:hover,
+.desktop-nav ul li a.active {
+  color: #e5b33f;
+}
+
+/* ============================================================
+   HAMBURGER BUTTON
+   ============================================================ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  z-index: 1100;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.hamburger:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.hamburger .bar {
+  display: block;
+  width: 26px;
+  height: 2.5px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.25s ease,
+              width 0.25s ease;
+  transform-origin: center;
+}
+
+/* Animate bars when open → X shape */
+.hamburger.is-open .bar:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+.hamburger.is-open .bar:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+.hamburger.is-open .bar:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+
+/* ============================================================
+   MOBILE MENU (slide-in panel)
+   ============================================================ */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100vh;
+  background: #111c12;
+  z-index: 1050;
+  padding: 100px 0 40px;
+  box-sizing: border-box;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  border-left: 1px solid rgba(229, 179, 63, 0.2);
+  box-shadow: -8px 0 32px rgba(0, 0, 0, 0.4);
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
+
+.mobile-menu nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.mobile-menu nav ul li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.mobile-menu nav ul li a,
+.mobile-menu nav ul li a.mobile-link {
+  display: block;
+  padding: 18px 0;
+  font-family: 'Grift', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #d4cfc8;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.mobile-menu nav ul li a:hover,
+.mobile-menu nav ul li a.mobile-link:hover,
+.mobile-menu nav ul li a.active {
+  color: #e5b33f;
+  padding-left: 8px;
+}
+
+/* ============================================================
+   BACKDROP
+   ============================================================ */
+.mobile-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1040;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.mobile-backdrop.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ============================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================ */
+@media (max-width: 900px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu,
+  .mobile-backdrop {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    height: 70px;
+    padding: 0 4%;
+  }
+
+  .logo-container img {
+    max-height: 56px;
+  }
+
+  .mobile-menu {
+    width: 100%;
+    border-left: none;
+  }
 }

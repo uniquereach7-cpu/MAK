@@ -10,7 +10,7 @@
 /* base */
 .testimonial-section {
   position: relative;
-  max-height: 480px;
+  max-height: 500px;
   color: #fff;
   overflow: visible;
   display: flex;
@@ -57,7 +57,7 @@
   z-index: 2;
   width: 100%;
   max-width: 1100px;
-  padding: 48px 22px;
+  padding: 50px 22px;
   box-sizing: border-box;
   text-align: center;
 }
@@ -68,7 +68,7 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   color: rgba(255,255,255,0.7);
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   font-weight: 600;
 }
 .title {
@@ -76,7 +76,7 @@
   font-size: 56px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin: 6px 0 24px;
+  margin: 6px 0 30px;
   color: #c99c43;
   font-weight: 600;
 }
@@ -135,7 +135,7 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-top: 18px;
+  margin-top: 20px;
   justify-content: center;
 }
 .avatar {
@@ -161,7 +161,7 @@
 /* controls */
 .ctrl {
   position: absolute;
-  top: 50%;
+  top: 20%;
   transform: translateY(-50%);
   width: 44px;
   height: 44px;
@@ -186,7 +186,7 @@
   display:flex;
   gap:10px;
   justify-content:center;
-  margin-top:2px;
+  margin-top:1px;
 }
 .dot {
   width:12px;
@@ -211,7 +211,7 @@
   .title { font-size: 40px; letter-spacing: 1.2px; }
   .slides { height: auto; padding: 10px 0 40px; }
   .quote { font-size: 18px; padding: 6px 12px; }
-  .ctrl { width: 36px; height: 36px; font-size: 18px; }
+  .ctrl { width: 40px; height: 36px; font-size: 18px; }
 }
 
 @media (max-width: 480px) {
