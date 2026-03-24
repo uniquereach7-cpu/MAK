@@ -315,10 +315,151 @@
 }
 
 /* ============================================================
-   SECTION 3: SERVICES
+   SECTION 3: PRODUCTS
+   ============================================================ */
+.mod-products {
+  background-color: #2c3830;
+  padding: 64px 5% 72px;
+  margin-top: 56px;
+  border-radius: 20px;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+/* Header */
+.mod-products__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.mod-products__title {
+  font-family: 'GriftBold', serif;
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  letter-spacing: 0.01em;
+}
+
+.mod-products__subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #cccccc;
+  margin: 0 0 16px 0;
+}
+
+.mod-products__divider {
+  width: 48px;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  opacity: 0.5;
+}
+
+/* 4-column grid */
+.mod-products__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Card */
+.mod-products__card {
+  background-color: #f5f0e8;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+}
+
+/* Card image */
+.mod-products__card-img-wrap {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.mod-products__card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.mod-products__card:hover .mod-products__card-img {
+  transform: scale(1.04);
+}
+
+/* Card body */
+.mod-products__card-body {
+  padding: 22px 20px 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Number + title row */
+.mod-products__card-num-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.mod-products__card-num {
+  font-family: 'GriftBold', serif;
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: bold;
+  color: #1a1a1a;
+  line-height: 1;
+  flex-shrink: 0;
+  border-bottom: 2px solid #1a1a1a;
+  padding-bottom: 4px;
+  align-self: flex-start;
+}
+
+.mod-products__card-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.35;
+  padding-top: 4px;
+}
+
+/* Subtitle */
+.mod-products__card-sub {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 0.78rem;
+  color: #8a8078;
+  margin: 0 0 14px 0;
+  font-style: italic;
+}
+
+/* Description */
+.mod-products__card-desc {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: #555555;
+  margin: 0;
+}
+
+/* ============================================================
+   SECTION 4: SERVICES
    ============================================================ */
 .mod-services {
-  padding: 72px 5% 80px;
+  padding: 90px 5% 10px;
 }
 
 .mod-services__header {
@@ -394,7 +535,7 @@
   flex: 0 0 42%;
   overflow: hidden;
   border-radius: 4px;
-  max-height: 360px;
+  max-height: 320px;
 }
 .mod-services__image {
   width: 100%;
@@ -469,6 +610,16 @@
    RESPONSIVE
    ============================================================ */
 @media (max-width: 900px) {
+  .mod-products__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mod-products__card {
+    border-right: none;
+    border-bottom: 1px solid #e5e0d8;
+  }
+  .mod-products__card:last-child {
+    border-bottom: none;
+  }
   .mod-hero__top {
     flex-direction: column;
     align-items: flex-start;
@@ -514,6 +665,12 @@
 }
 
 @media (max-width: 600px) {
+  .mod-products__grid {
+    grid-template-columns: 1fr;
+  }
+  .mod-products__card-img-wrap {
+    height: 180px;
+  }
   .mod-about__top-row {
     flex-direction: column;
   }

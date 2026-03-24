@@ -22,7 +22,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  gap: 100px;
   align-items: start;
 }
 
@@ -81,8 +81,8 @@
 .right{
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  height: 600px;
+  gap: 20px;
+  height: 700px;
   justify-content: center;
 }
 
