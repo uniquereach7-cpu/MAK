@@ -14,25 +14,25 @@
   font-style: italic;
 }
 @font-face {
-  font-family: 'Poppins', sans-serif; font-weight: 600;
+  font-family: 'Grift', sans-serif; font-weight: 600;
   src: url('/assets/fonts/grift-semibold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Poppins', sans-serif; font-weight: 500;
+  font-family: 'Grift', sans-serif; font-weight: 500;
   src: url('/assets/fonts/grift-medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Poppins', sans-serif; font-weight: 400;
+  font-family: 'Grift', sans-serif; font-weight: 400;
   src: url('/assets/fonts/grift-regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Poppins', sans-serif; font-weight: 300;
+  font-family: 'Grift', sans-serif; font-weight: 300;
   src: url('/assets/fonts/grift-light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
@@ -63,7 +63,7 @@
 
   background-color: var(--bg);
   color: var(--text);
-  font-family: 'Poppins', sans-serif; font-weight: 400;
+  font-family: 'Grift', sans-serif; font-weight: 400;
   padding-top: 50px;
   overflow-x: hidden;
 }
@@ -75,7 +75,7 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  font-family: 'Poppins', sans-serif; font-weight: 500;
+  font-family: 'Grift', sans-serif; font-weight: 500;
   font-size: 0.68rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -155,7 +155,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Poppins', sans-serif; font-weight: 500;
+  font-family: 'Grift', sans-serif; font-weight: 500;
   font-size: 0.68rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -180,14 +180,14 @@
 
 /* Paragraphs */
 .abt-who__para {
-  font-family: 'Poppins', sans-serif; font-weight: 300;
+  font-family: 'Grift', sans-serif; font-weight: 300;
   font-size: clamp(0.88rem, 1.2vw, 1rem);
   line-height: 1.78;
   color: rgba(255, 255, 255, 0.82);
   margin: 0 0 22px 0;
 }
 .abt-who__para strong {
-  font-family: 'Poppins', sans-serif; font-weight: 600;
+  font-family: 'Grift', sans-serif; font-weight: 600;
   color: #ffffff;
 }
 .abt-who__para:last-of-type {
@@ -258,7 +258,7 @@
   box-shadow: 0 8px 24px rgba(0,0,0,0.4);
 }
 .abt-who__badge-year {
-  font-family: 'Poppins', sans-serif; font-weight: 300;
+  font-family: 'Grift', sans-serif; font-weight: 300;
   font-size: 0.6rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -348,7 +348,7 @@
 }
 
 .abt-story__para {
-  font-family: 'Poppins', sans-serif; font-weight: 300;
+  font-family: 'Grift', sans-serif; font-weight: 300;
   font-size: clamp(0.86rem, 1.15vw, 0.98rem);
   line-height: 1.82;
   color: var(--text-muted);
@@ -382,7 +382,7 @@
   left: 0;
   right: 0;
   background: linear-gradient(to top, rgba(12, 24, 16, 0.75) 0%, transparent 100%);
-  font-family: 'Poppins', sans-serif; font-weight: 500;
+  font-family: 'Grift', sans-serif; font-weight: 500;
   font-size: 0.7rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -509,7 +509,7 @@
 }
 
 .abt-stats__label {
-  font-family: 'Poppins', sans-serif; font-weight: 300;
+  font-family: 'Grift', sans-serif; font-weight: 300;
   font-size: 0.72rem;
   letter-spacing: 0.1em;
   color: rgba(255, 255, 255, 0.7);
@@ -553,7 +553,7 @@
 }
 
 .abt-why__sub {
-  font-family: 'Poppins', sans-serif; font-weight: 300;
+  font-family: 'Grift', sans-serif; font-weight: 300;
   font-size: clamp(0.88rem, 1.2vw, 1rem);
   line-height: 1.72;
   color: var(--text-muted);
@@ -609,7 +609,7 @@
 }
 
 .abt-why__card-desc {
-  font-family: 'Poppins', sans-serif; font-weight: 300;
+  font-family: 'Grift', sans-serif; font-weight: 300;
   font-size: 0.84rem;
   line-height: 1.72;
   color: var(--text-muted);
@@ -725,13 +725,13 @@
   font-style: normal;
 }
 .abt-quote__founder-name {
-  font-family: 'Poppins', sans-serif; font-weight: 600;
+  font-family: 'Grift', sans-serif; font-weight: 600;
   font-size: 1rem;
   letter-spacing: 0.05em;
   color: var(--gold);
 }
 .abt-quote__founder-title {
-  font-family: 'Poppins', sans-serif; font-weight: 300;
+  font-family: 'Grift', sans-serif; font-weight: 300;
   font-size: 0.76rem;
   letter-spacing: 0.08em;
   color: rgba(255, 255, 255, 0.5);

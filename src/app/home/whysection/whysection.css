@@ -12,7 +12,7 @@
   width: 100%;
   background: bisque;        /* Your website background */
   padding: 0px 20px;
-  font-family: Inter, sans-serif;
+  font-family: 'Grift', sans-serif;
   color: var(--text-dark);
 }
 
@@ -134,7 +134,7 @@
 
 /* TEXT BLOCK */
 .feature-title{
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Grift", sans-serif;
   font-size: 16px;
   font-weight: 400;
   margin: 0;

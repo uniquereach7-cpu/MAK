@@ -74,7 +74,7 @@ export class Modular {
       description:
         'From study nooks and feature walls to office fit-outs and niche cabinetry, our custom modular solutions are engineered for unique briefs. We work with designers and architects to produce precision-made components and ensure smooth, professional installation.',
       highlight: 'Bespoke modules with factory precision.',
-      image: 'assets/custom-interior-sol.jpg',
+      image: 'assets/modhero4.jpg',
       link: 'EXPLORE PROJECTS',
     },
   };

@@ -14,25 +14,25 @@
   font-style: italic;
 }
 @font-face {
-  font-family: 'Poppins', sans-serif; font-weight: 600;
+  font-family: 'Grift', sans-serif; font-weight: 600;
   src: url('/assets/fonts/grift-semibold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Poppins', sans-serif; font-weight: 500;
+  font-family: 'Grift', sans-serif; font-weight: 500;
   src: url('/assets/fonts/grift-medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Poppins', sans-serif; font-weight: 400;
+  font-family: 'Grift', sans-serif; font-weight: 400;
   src: url('/assets/fonts/grift-regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Poppins', sans-serif; font-weight: 300;
+  font-family: 'Grift', sans-serif; font-weight: 300;
   src: url('/assets/fonts/grift-light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
@@ -57,7 +57,7 @@
 
   background-color: var(--bg);
   color: var(--text);
-  font-family: 'Poppins', sans-serif; font-weight: 400;
+  font-family: 'Grift', sans-serif; font-weight: 400;
   padding-top: 100px; /* offset fixed header */
   overflow-x: hidden;
 }
@@ -121,7 +121,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Poppins', sans-serif; font-weight: 500;
+  font-family: 'Grift', sans-serif; font-weight: 500;
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -152,7 +152,7 @@
 
 /* Description */
 .srv-intro__desc {
-  font-family: 'Poppins', sans-serif; font-weight: 300;
+  font-family: 'Grift', sans-serif; font-weight: 300;
   font-size: clamp(0.9rem, 1.4vw, 1.05rem);
   line-height: 1.75;
   color: black;
@@ -227,7 +227,7 @@
 }
 
 .srv-stats__label {
-  font-family: 'Poppins', sans-serif; font-weight: 300;
+  font-family: 'Grift', sans-serif; font-weight: 300;
   font-size: 0.72rem;
   letter-spacing: 0.08em;
   color: var(--text-muted);
@@ -336,7 +336,7 @@
   position: absolute;
   top: 14px;
   right: 14px;
-  font-family: 'Poppins', sans-serif; font-weight: 600;
+  font-family: 'Grift', sans-serif; font-weight: 600;
   font-size: 0.58rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -403,7 +403,7 @@
 
 /* Short tagline */
 .srv-card__short {
-  font-family: 'Poppins', sans-serif; font-weight: 500;
+  font-family: 'Grift', sans-serif; font-weight: 500;
   font-size: 0.75rem;
   letter-spacing: 0.05em;
   color: var(--gold);
@@ -414,7 +414,7 @@
 
 /* Description */
 .srv-card__desc {
-  font-family: 'Poppins', sans-serif; font-weight: 300;
+  font-family: 'Grift', sans-serif; font-weight: 300;
   font-size: 0.83rem;
   line-height: 1.7;
   color: var(--text-muted);
@@ -427,7 +427,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: 'Poppins', sans-serif; font-weight: 600;
+  font-family: 'Grift', sans-serif; font-weight: 600;
   font-size: 0.75rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -484,7 +484,7 @@
 }
 
 .srv-cta__kicker {
-  font-family: 'Poppins', sans-serif; font-weight: 500;
+  font-family: 'Grift', sans-serif; font-weight: 500;
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -506,7 +506,7 @@
 }
 
 .srv-cta__desc {
-  font-family: 'Poppins', sans-serif; font-weight: 300;
+  font-family: 'Grift', sans-serif; font-weight: 300;
   font-size: 0.92rem;
   line-height: 1.7;
   color: var(--text-muted);
@@ -516,7 +516,7 @@
 .srv-cta__btn {
   display: inline-block;
   padding: 14px 36px;
-  font-family: 'Poppins', sans-serif; font-weight: 600;
+  font-family: 'Grift', sans-serif; font-weight: 600;
   font-size: 0.82rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;

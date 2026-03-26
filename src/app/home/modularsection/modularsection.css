@@ -1,6 +1,3 @@
-/* Google fonts (you can also add these to index.html) */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;700;900&display=swap');
-
 :root {
   --dark-bg: #16120f;
   --panel-beige: #f5f0ea;
@@ -10,7 +7,7 @@
 }
 
 * { box-sizing: border-box; }
-:host { display: block; font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+:host { display: block; font-family: 'Grift', sans-serif; }
 
 body, html { margin: 0; padding: 0; }
 
@@ -132,7 +129,7 @@ body, html { margin: 0; padding: 0; }
 }
 
 .panel h1 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Grift', serif;
   font-size: 52px;
   line-height: 1.15;
   margin: 12px 0 18px;
@@ -173,7 +170,7 @@ body, html { margin: 0; padding: 0; }
   color: #7a7672;
   line-height: 1.6;
   margin: 8px 0 0;
-  font-family: 'Montserrat', system-ui;
+  font-family: 'Grift', sans-serif;
   font-weight: 400;
 }
 

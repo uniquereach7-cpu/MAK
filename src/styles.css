@@ -1,7 +1,55 @@
-/* Add this to src/styles.css */
+@font-face {
+  font-family: 'Grift';
+  src: url('/assets/fonts/grift-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Grift';
+  src: url('/assets/fonts/grift-medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Grift';
+  src: url('/assets/fonts/grift-semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Grift';
+  src: url('/assets/fonts/grift-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Grift';
+  src: url('/assets/fonts/grift-bolditalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   overflow-x: hidden; /* Prevents horizontal scrollbars */
+  font-family: 'Grift', sans-serif;
+}
+
+body {
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+input, select, textarea, button {
+  font-family: 'Grift', sans-serif;
 }

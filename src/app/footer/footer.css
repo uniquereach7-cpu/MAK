@@ -1,7 +1,7 @@
 .site-footer{
 background:#1e2a35;
 color:#cfd8dc;
-font-family:Montserrat, sans-serif;
+font-family:'Grift', sans-serif;
 padding-top:35px;
 }
 
@@ -96,11 +96,24 @@ color:white;
 
 /* map */
 
-.map-col iframe{
+.footer-map-link{
+display:block;
+text-decoration:none;
+overflow:hidden;
+border-radius:6px;
+}
+
+.footer-map-image{
 width:100%;
 height:160px;
-border-radius:6px;
-border:none;
+object-fit:cover;
+display:block;
+transition:transform .25s ease, filter .25s ease;
+}
+
+.footer-map-link:hover .footer-map-image{
+transform:scale(1.02);
+filter:brightness(0.95);
 }
 
 /* bottom bar */

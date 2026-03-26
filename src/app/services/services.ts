@@ -39,7 +39,7 @@ export class Services implements AfterViewInit {
       shortDesc: 'Smart kitchens for modern lifestyles',
       fullDesc:
         'Precision-engineered modular kitchen solutions that maximize every inch of space with premium finishes, smart storage, and ergonomic layouts built for how you truly live.',
-      image: 'assets/hero2.jpg',
+      image: 'assets/Modularkitchen.jpg',
       tag: 'POPULAR',
       icon: '◇',
     },

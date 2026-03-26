@@ -14,19 +14,19 @@
   font-style: italic;
 }
 @font-face {
-  font-family: 'Poppins', sans-serif; font-weight: 400;
+  font-family: 'Grift', sans-serif; font-weight: 400;
   src: url('/assets/fonts/grift-regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Poppins', sans-serif; font-weight: 500;
+  font-family: 'Grift', sans-serif; font-weight: 500;
   src: url('/assets/fonts/grift-medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Poppins', sans-serif; font-weight: 300;
+  font-family: 'Grift', sans-serif; font-weight: 300;
   src: url('/assets/fonts/grift-light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
@@ -46,7 +46,7 @@
   --mod-tag-color:   #8a8078;
 
   background-color: var(--mod-bg);
-  font-family: 'Poppins', sans-serif; font-weight: 400;
+  font-family: 'Grift', sans-serif; font-weight: 400;
   color: var(--mod-text);
   padding-top: 100px; /* offset for fixed header */
 }
@@ -58,7 +58,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-family: 'Poppins', sans-serif; font-weight: 500;
+  font-family: 'Grift', sans-serif; font-weight: 500;
   font-size: 0.7rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -79,7 +79,7 @@
 .mod-text-link {
   display: inline-flex;
   align-items: center;
-  font-family: 'Poppins', sans-serif; font-weight: 500;
+  font-family: 'Grift', sans-serif; font-weight: 500;
   font-size: 0.78rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -138,7 +138,7 @@
 }
 
 .mod-hero__subtitle {
-  font-family: 'Poppins', sans-serif; font-weight: 400;
+  font-family: 'Grift', sans-serif; font-weight: 400;
   font-size: 0.88rem;
   line-height: 1.55;
   color: var(--mod-text);
@@ -148,7 +148,7 @@
 .mod-hero__explore-link {
   display: inline-flex;
   align-items: center;
-  font-family: 'Poppins', sans-serif; font-weight: 500;
+  font-family: 'Grift', sans-serif; font-weight: 500;
   font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -237,7 +237,7 @@
 }
 
 .mod-about__desc {
-  font-family: 'Poppins', sans-serif; font-weight: 300;
+  font-family: 'Grift', sans-serif; font-weight: 300;
   font-size: 0.85rem;
   line-height: 1.7;
   color: var(--mod-text-muted);
@@ -276,7 +276,7 @@
 }
 
 .mod-why__feature-title {
-  font-family: 'Poppins', sans-serif; font-weight: 500;
+  font-family: 'Grift', sans-serif; font-weight: 500;
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--mod-text);
@@ -292,7 +292,7 @@
 }
 
 .mod-why__feature-desc {
-  font-family: 'Poppins', sans-serif; font-weight: 300;
+  font-family: 'Grift', sans-serif; font-weight: 300;
   font-size: 0.82rem;
   line-height: 1.6;
   color: var(--mod-text-muted);
@@ -342,7 +342,7 @@
 }
 
 .mod-products__subtitle {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Grift', sans-serif;
   font-weight: 400;
   font-size: 0.75rem;
   letter-spacing: 0.22em;
@@ -424,7 +424,7 @@
 }
 
 .mod-products__card-title {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Grift', sans-serif;
   font-weight: 700;
   font-size: 0.82rem;
   letter-spacing: 0.04em;
@@ -437,7 +437,7 @@
 
 /* Subtitle */
 .mod-products__card-sub {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Grift', sans-serif;
   font-weight: 400;
   font-size: 0.78rem;
   color: #8a8078;
@@ -447,7 +447,7 @@
 
 /* Description */
 .mod-products__card-desc {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Grift', sans-serif;
   font-weight: 300;
   font-size: 0.8rem;
   line-height: 1.7;
@@ -476,7 +476,7 @@
 }
 
 .mod-services__subtitle {
-  font-family: 'Poppins', sans-serif; font-weight: 300;
+  font-family: 'Grift', sans-serif; font-weight: 300;
   font-size: 0.88rem;
   line-height: 1.65;
   color: var(--mod-text-muted);
@@ -503,7 +503,7 @@
   width: 100%;
   padding: 14px 18px;
   text-align: left;
-  font-family: 'Poppins', sans-serif; font-weight: 500;
+  font-family: 'Grift', sans-serif; font-weight: 500;
   font-size: 0.88rem;
   letter-spacing: 0.02em;
   color: var(--mod-text);
@@ -569,14 +569,14 @@
 }
 
 .mod-services__sub {
-  font-family: 'Poppins', sans-serif; font-weight: 400;
+  font-family: 'Grift', sans-serif; font-weight: 400;
   font-size: 1rem;
   color: var(--mod-green-dark);
   margin: 0 0 16px 0;
 }
 
 .mod-services__desc {
-  font-family: 'Poppins', sans-serif; font-weight: 300;
+  font-family: 'Grift', sans-serif; font-weight: 300;
   font-size: 0.85rem;
   line-height: 1.7;
   color: var(--mod-text-muted);
@@ -595,7 +595,7 @@
   margin-top: 1px;
 }
 .mod-services__highlight span:last-child {
-  font-family: 'Poppins', sans-serif; font-weight: 500;
+  font-family: 'Grift', sans-serif; font-weight: 500;
   font-size: 0.83rem;
   line-height: 1.5;
   color: var(--mod-text);
