@@ -63,7 +63,7 @@
   font-weight: 600;
 }
 .title {
-  font-family: 'Grift', Georgia, serif;
+  font-family: 'Playfair Display', serif;
   font-size: 56px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -114,7 +114,7 @@
   margin: 0 auto;
   font-size: 18px;
   line-height: 1.6;
-  font-family: 'Grift', sans-serif;
+  font-family: 'Playfair Display', serif;
   color: rgba(255,255,255,0.95);
   padding: 8px 18px;
   border-radius: 6px;

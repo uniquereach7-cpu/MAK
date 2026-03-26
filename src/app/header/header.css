@@ -1,14 +1,6 @@
 /* ============================================================
    FONT DECLARATION
    ============================================================ */
-@font-face {
-  font-family: 'Grift';
-  src: url('/assets/fonts/Grift-Bold.woff2') format('woff2'),
-       url('/assets/fonts/Grift-Bold.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 /* ============================================================
    NAVBAR
    ============================================================ */
@@ -28,7 +20,7 @@
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  font-family: 'Grift', sans-serif;
+  font-family: 'Playfair Display', serif;
 }
 
 /* ============================================================
@@ -163,7 +155,7 @@
 .mobile-menu nav ul li a.mobile-link {
   display: block;
   padding: 18px 0;
-  font-family: 'Grift', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;

@@ -64,7 +64,7 @@
 }
 
 .subtitle {
-  font-family: 'Grift', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 0.95rem;
   letter-spacing: 6px;
   color: #c99c43; /* Pale gold */
@@ -73,11 +73,9 @@
   font-weight: 400;
 }
 
-/* Base font for the title should be a clean serif, 
-   or Poppins depending on your preference. 
-   The image uses a serif font for the main title. */
+/* Main title uses the project-wide Playfair Display serif font. */
 .main-title {
-  font-family: 'Grift', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 6.5rem;
   font-weight: 300; /* Thin weight */
   line-height: 1.1;
@@ -85,15 +83,15 @@
   margin: 0 0 20px 0;
 }
 
-/* Grift font applied specifically to the highlight word */
+/* Highlight keeps the same Playfair family with italic styling. */
 .highlight {
-  font-family: 'Grift', serif;
+  font-family: 'Playfair Display', serif;
   font-style: italic; 
   color: #d19f3a; /* Rich gold */
 }
 
 .description {
-  font-family: 'Grift', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.15rem;
   font-weight: 300;
   line-height: 1.6;
@@ -111,7 +109,7 @@
 
 .btn {
   padding: 16px 40px;
-  font-family: 'Grift', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 0.85rem;
   letter-spacing: 2px;
   text-transform: uppercase;

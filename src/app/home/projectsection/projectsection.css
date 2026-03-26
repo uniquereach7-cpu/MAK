@@ -1,6 +1,6 @@
 :host {
   display: block;
-  font-family: "Grift", sans-serif;
+  font-family: 'Playfair Display', serif;
 }
 
 /* Wrapper */
@@ -16,7 +16,7 @@
 
 /* Heading */
 .section-title {
-  font-family: "Grift", Georgia, serif;
+  font-family: 'Playfair Display', serif;
   font-size: 56px;
   letter-spacing: 2px;
   text-transform: uppercase;

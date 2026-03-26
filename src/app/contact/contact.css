@@ -1,43 +1,6 @@
 /* ============================================================
    GRIFT FONT DECLARATIONS
    ============================================================ */
-@font-face {
-  font-family: 'GriftBold';
-  src: url('/assets/fonts/grift-bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'GriftBoldItalic';
-  src: url('/assets/fonts/grift-bolditalic.ttf') format('truetype');
-  font-weight: bold;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Grift', sans-serif; font-weight: 600;
-  src: url('/assets/fonts/grift-semibold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Grift', sans-serif; font-weight: 500;
-  src: url('/assets/fonts/grift-medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Grift', sans-serif; font-weight: 400;
-  src: url('/assets/fonts/grift-regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Grift', sans-serif; font-weight: 300;
-  src: url('/assets/fonts/grift-light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-
 /* ============================================================
    PAGE WRAPPER & DESIGN TOKENS
    ============================================================ */
@@ -56,7 +19,7 @@
 
   background-color: var(--bg);
   color: var(--text);
-  font-family: 'Grift', sans-serif; font-weight: 400;
+  font-family: 'Playfair Display', serif; font-weight: 400;
   padding-top: 100px;
   overflow-x: hidden;
 }
@@ -68,7 +31,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Grift', sans-serif; font-weight: 500;
+  font-family: 'Playfair Display', serif; font-weight: 500;
   font-size: 0.68rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -128,7 +91,7 @@
 }
 
 .ctn-form-title {
-  font-family: 'GriftBold', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(28px, 3.5vw, 48px);
   font-weight: bold;
   color: var(--text);
@@ -137,7 +100,7 @@
   letter-spacing: -0.01em;
 }
 .ctn-form-title em {
-  font-family: 'GriftBoldItalic', serif;
+  font-family: 'Playfair Display', serif;
   font-style: italic;
   color: var(--green);
 }
@@ -166,7 +129,7 @@
 }
 
 .ctn-label {
-  font-family: 'Grift', sans-serif; font-weight: 500;
+  font-family: 'Playfair Display', serif; font-weight: 500;
   font-size: 0.75rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -176,7 +139,7 @@
 .ctn-input,
 .ctn-select,
 .ctn-textarea {
-  font-family: 'Grift', sans-serif; font-weight: 400;
+  font-family: 'Playfair Display', serif; font-weight: 400;
   font-size: 0.88rem;
   color: var(--text);
   background: #ffffff;
@@ -245,7 +208,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Grift', sans-serif; font-weight: 600;
+  font-family: 'Playfair Display', serif; font-weight: 600;
   font-size: 0.82rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -279,7 +242,7 @@
 }
 
 .ctn-submit-note {
-  font-family: 'Grift', sans-serif; font-weight: 500;
+  font-family: 'Playfair Display', serif; font-weight: 500;
   font-size: 0.78rem;
   letter-spacing: 0.06em;
   color: var(--green);
@@ -329,13 +292,13 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
 }
 .ctn-img-badge-sub {
-  font-family: 'Grift', sans-serif; font-weight: 300;
+  font-family: 'Playfair Display', serif; font-weight: 300;
   font-size: 0.7rem;
   color: var(--text-muted);
   letter-spacing: 0.04em;
 }
 .ctn-img-badge-main {
-  font-family: 'Grift', sans-serif; font-weight: 600;
+  font-family: 'Playfair Display', serif; font-weight: 600;
   font-size: 0.78rem;
   letter-spacing: 0.06em;
   color: var(--green);
@@ -405,7 +368,7 @@
 }
 
 .ctn-info-title {
-  font-family: 'GriftBold', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1rem;
   color: var(--text);
   margin: 0 0 10px 0;
@@ -413,7 +376,7 @@
 }
 
 .ctn-info-link {
-  font-family: 'Grift', sans-serif; font-weight: 400;
+  font-family: 'Playfair Display', serif; font-weight: 400;
   font-size: 0.84rem;
   color: var(--text-muted);
   text-decoration: none;
@@ -432,7 +395,7 @@
 }
 
 .ctn-info-text {
-  font-family: 'Grift', sans-serif; font-weight: 400;
+  font-family: 'Playfair Display', serif; font-weight: 400;
   font-size: 0.84rem;
   color: var(--text-muted);
   margin: 0;
@@ -454,7 +417,7 @@
 }
 
 .ctn-map-title {
-  font-family: 'GriftBold', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(28px, 4vw, 52px);
   font-weight: bold;
   color: var(--text);
@@ -463,7 +426,7 @@
   letter-spacing: -0.01em;
 }
 .ctn-map-title em {
-  font-family: 'GriftBoldItalic', serif;
+  font-family: 'Playfair Display', serif;
   font-style: italic;
   color: var(--green);
 }

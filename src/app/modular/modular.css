@@ -1,37 +1,6 @@
 /* ============================================================
    GRIFT FONT DECLARATIONS
    ============================================================ */
-@font-face {
-  font-family: 'GriftBold';
-  src: url('/assets/fonts/grift-bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'GriftBoldItalic';
-  src: url('/assets/fonts/grift-bolditalic.ttf') format('truetype');
-  font-weight: bold;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Grift', sans-serif; font-weight: 400;
-  src: url('/assets/fonts/grift-regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Grift', sans-serif; font-weight: 500;
-  src: url('/assets/fonts/grift-medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Grift', sans-serif; font-weight: 300;
-  src: url('/assets/fonts/grift-light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-
 /* ============================================================
    DESIGN TOKENS
    ============================================================ */
@@ -46,7 +15,7 @@
   --mod-tag-color:   #8a8078;
 
   background-color: var(--mod-bg);
-  font-family: 'Grift', sans-serif; font-weight: 400;
+  font-family: 'Playfair Display', serif; font-weight: 400;
   color: var(--mod-text);
   padding-top: 100px; /* offset for fixed header */
 }
@@ -58,7 +27,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-family: 'Grift', sans-serif; font-weight: 500;
+  font-family: 'Playfair Display', serif; font-weight: 500;
   font-size: 0.7rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -79,7 +48,7 @@
 .mod-text-link {
   display: inline-flex;
   align-items: center;
-  font-family: 'Grift', sans-serif; font-weight: 500;
+  font-family: 'Playfair Display', serif; font-weight: 500;
   font-size: 0.78rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -117,7 +86,7 @@
   display: flex;
   flex-direction: column;
   margin: 0;
-  font-family: 'GriftBoldItalic', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(52px, 7vw, 96px);
   font-weight: bold;
   font-style: italic;
@@ -138,7 +107,7 @@
 }
 
 .mod-hero__subtitle {
-  font-family: 'Grift', sans-serif; font-weight: 400;
+  font-family: 'Playfair Display', serif; font-weight: 400;
   font-size: 0.88rem;
   line-height: 1.55;
   color: var(--mod-text);
@@ -148,7 +117,7 @@
 .mod-hero__explore-link {
   display: inline-flex;
   align-items: center;
-  font-family: 'Grift', sans-serif; font-weight: 500;
+  font-family: 'Playfair Display', serif; font-weight: 500;
   font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -228,7 +197,7 @@
 }
 
 .mod-about__heading {
-  font-family: 'GriftBold', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(22px, 2.4vw, 32px);
   font-weight: bold;
   color: var(--mod-green-dark);
@@ -237,7 +206,7 @@
 }
 
 .mod-about__desc {
-  font-family: 'Grift', sans-serif; font-weight: 300;
+  font-family: 'Playfair Display', serif; font-weight: 300;
   font-size: 0.85rem;
   line-height: 1.7;
   color: var(--mod-text-muted);
@@ -252,7 +221,7 @@
 }
 
 .mod-why__heading {
-  font-family: 'GriftBold', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(18px, 2vw, 26px);
   font-weight: bold;
   color: var(--mod-green-dark);
@@ -276,7 +245,7 @@
 }
 
 .mod-why__feature-title {
-  font-family: 'Grift', sans-serif; font-weight: 500;
+  font-family: 'Playfair Display', serif; font-weight: 500;
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--mod-text);
@@ -292,7 +261,7 @@
 }
 
 .mod-why__feature-desc {
-  font-family: 'Grift', sans-serif; font-weight: 300;
+  font-family: 'Playfair Display', serif; font-weight: 300;
   font-size: 0.82rem;
   line-height: 1.6;
   color: var(--mod-text-muted);
@@ -333,7 +302,7 @@
 }
 
 .mod-products__title {
-  font-family: 'GriftBold', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(28px, 3.5vw, 48px);
   font-weight: bold;
   color: #ffffff;
@@ -342,7 +311,7 @@
 }
 
 .mod-products__subtitle {
-  font-family: 'Grift', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-size: 0.75rem;
   letter-spacing: 0.22em;
@@ -412,7 +381,7 @@
 }
 
 .mod-products__card-num {
-  font-family: 'GriftBold', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(36px, 4vw, 52px);
   font-weight: bold;
   color: #1a1a1a;
@@ -424,7 +393,7 @@
 }
 
 .mod-products__card-title {
-  font-family: 'Grift', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 0.82rem;
   letter-spacing: 0.04em;
@@ -437,7 +406,7 @@
 
 /* Subtitle */
 .mod-products__card-sub {
-  font-family: 'Grift', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-size: 0.78rem;
   color: #8a8078;
@@ -447,7 +416,7 @@
 
 /* Description */
 .mod-products__card-desc {
-  font-family: 'Grift', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 300;
   font-size: 0.8rem;
   line-height: 1.7;
@@ -468,7 +437,7 @@
 }
 
 .mod-services__heading {
-  font-family: 'GriftBold', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(28px, 3.5vw, 48px);
   font-weight: bold;
   color: var(--mod-green-dark);
@@ -476,7 +445,7 @@
 }
 
 .mod-services__subtitle {
-  font-family: 'Grift', sans-serif; font-weight: 300;
+  font-family: 'Playfair Display', serif; font-weight: 300;
   font-size: 0.88rem;
   line-height: 1.65;
   color: var(--mod-text-muted);
@@ -503,7 +472,7 @@
   width: 100%;
   padding: 14px 18px;
   text-align: left;
-  font-family: 'Grift', sans-serif; font-weight: 500;
+  font-family: 'Playfair Display', serif; font-weight: 500;
   font-size: 0.88rem;
   letter-spacing: 0.02em;
   color: var(--mod-text);
@@ -519,7 +488,7 @@
 .mod-tab--active {
   background-color: var(--mod-green-dark);
   color: #ffffff;
-  font-family: 'poppins', sans-serif;
+  font-family: 'Playfair Display', serif;
 }
 
 /* Content Panel */
@@ -556,7 +525,7 @@
 }
 
 .mod-services__title {
-  font-family: 'GriftBold', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(20px, 2.2vw, 30px);
   font-weight: bold;
   color: var(--mod-green-dark);
@@ -564,19 +533,19 @@
   line-height: 1.2;
 }
 .mod-services__title em {
-  font-family: 'poppins', sans-serif;
+  font-family: 'Playfair Display', serif;
   /* font-style: italic; */
 }
 
 .mod-services__sub {
-  font-family: 'Grift', sans-serif; font-weight: 400;
+  font-family: 'Playfair Display', serif; font-weight: 400;
   font-size: 1rem;
   color: var(--mod-green-dark);
   margin: 0 0 16px 0;
 }
 
 .mod-services__desc {
-  font-family: 'Grift', sans-serif; font-weight: 300;
+  font-family: 'Playfair Display', serif; font-weight: 300;
   font-size: 0.85rem;
   line-height: 1.7;
   color: var(--mod-text-muted);
@@ -595,7 +564,7 @@
   margin-top: 1px;
 }
 .mod-services__highlight span:last-child {
-  font-family: 'Grift', sans-serif; font-weight: 500;
+  font-family: 'Playfair Display', serif; font-weight: 500;
   font-size: 0.83rem;
   line-height: 1.5;
   color: var(--mod-text);

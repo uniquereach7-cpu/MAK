@@ -7,7 +7,7 @@
 }
 
 * { box-sizing: border-box; }
-:host { display: block; font-family: 'Grift', sans-serif; }
+:host { display: block; font-family: 'Playfair Display', serif; }
 
 body, html { margin: 0; padding: 0; }
 
@@ -129,7 +129,7 @@ body, html { margin: 0; padding: 0; }
 }
 
 .panel h1 {
-  font-family: 'Grift', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 52px;
   line-height: 1.15;
   margin: 12px 0 18px;
@@ -170,7 +170,7 @@ body, html { margin: 0; padding: 0; }
   color: #7a7672;
   line-height: 1.6;
   margin: 8px 0 0;
-  font-family: 'Grift', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 400;
 }
 
