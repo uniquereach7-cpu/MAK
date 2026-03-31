@@ -38,7 +38,7 @@ export class Modular {
       description:
         'Our modular kitchens blend ergonomic layouts with durable materials and refined finishes. We design efficient workflows, integrate appliances, and create tailored storage so every inch works for you — making cooking easier and surfaces clutter-free.',
       highlight: 'Efficient, elegant, and easy to maintain.',
-      image: 'assets/Modularkitchen.jpg',
+      image: 'assets/mod-kit1.jpg',
       link: 'EXPLORE PROJECTS',
     },
 

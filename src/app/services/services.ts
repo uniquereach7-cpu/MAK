@@ -29,7 +29,7 @@ export class Services implements AfterViewInit {
       shortDesc: 'Spaces that speak your personality',
       fullDesc:
         'We craft living environments that blend aesthetics with function — balancing light, texture, and form to create homes that feel as beautiful as they look.',
-      image: 'assets/hero1.jpg',
+      image: 'assets/modbedroom.jpeg',
       tag: 'SIGNATURE',
       icon: '◈',
     },
@@ -39,7 +39,7 @@ export class Services implements AfterViewInit {
       shortDesc: 'Smart kitchens for modern lifestyles',
       fullDesc:
         'Precision-engineered modular kitchen solutions that maximize every inch of space with premium finishes, smart storage, and ergonomic layouts built for how you truly live.',
-      image: 'assets/Modularkitchen.jpg',
+      image: 'assets/modkit1.jpeg',
       tag: 'POPULAR',
       icon: '◇',
     },
@@ -49,7 +49,7 @@ export class Services implements AfterViewInit {
       shortDesc: 'See your dream before it is built',
       fullDesc:
         'Photo-realistic 3D renderings that bring your vision to life before a single wall is touched — refine every detail with total confidence and creative clarity.',
-      image: 'assets/hero3.jpg',
+      image: 'assets/hall.jpg',
       tag: 'TECHNOLOGY',
       icon: '◉',
     },
@@ -69,7 +69,7 @@ export class Services implements AfterViewInit {
       shortDesc: 'Elevate every room from above',
       fullDesc:
         'From coffered to cove, our ceiling designs define depth and drama in any room — integrating lighting seamlessly to sculpt atmosphere and enhance spatial flow.',
-      image: 'assets/hero5.jpg',
+      image: 'assets/falsec1.jpeg',
       tag: 'ARCHITECTURAL',
       icon: '◫',
     },
@@ -79,7 +79,7 @@ export class Services implements AfterViewInit {
       shortDesc: 'Organised elegance for every style',
       fullDesc:
         'Sleek, personalised wardrobe systems that transform storage into a design statement — with custom compartments, mirrored panels, and finishes that complement your space.',
-      image: 'assets/about.jpg',
+      image: 'assets/wardrobes-and-storage-units.jpg',
       tag: 'STORAGE',
       icon: '▣',
     },
@@ -89,7 +89,7 @@ export class Services implements AfterViewInit {
       shortDesc: 'Where comfort meets craftsmanship',
       fullDesc:
         'Our custom bed designs merge structural elegance with plush comfort — upholstered headboards, platform frames, and storage-integrated bases that redefine your sanctuary.',
-      image: 'assets/Aditya-Villa.jpg',
+      image: 'assets/bedroom.jpg',
       tag: 'LUXURY',
       icon: '◎',
     },
@@ -99,7 +99,7 @@ export class Services implements AfterViewInit {
       shortDesc: 'Surfaces that tell a story',
       fullDesc:
         'Expert application of decorative wall textures, micro-cement finishes, and bespoke wall treatments that add dimension, warmth, and artistic flair to any interior.',
-      image: 'assets/Boduppal.jpg',
+      image: 'assets/wall.jpeg',
       tag: 'FINISHING',
       icon: '⬟',
     },

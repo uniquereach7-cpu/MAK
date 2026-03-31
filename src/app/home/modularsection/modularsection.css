@@ -42,7 +42,7 @@ body, html { margin: 0; padding: 0; }
 .scene .bg {
   position: absolute;
   inset: 0;
-  background-image: url('/assets/hero1.jpg');
+  background-image: url('/assets/mod-home.jpeg');
   background-size: cover;
   background-position: center;
   transform: scale(1.03);
