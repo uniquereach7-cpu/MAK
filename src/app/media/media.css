@@ -265,24 +265,3 @@
     gap: 40px 48px; 
   }
 }
-/* Standard iframe styling (keeps YouTube videos normal) */
-.video-frame iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-/* 1. Add overflow: hidden to the container */
-.video-card.portrait .video-frame {
-  aspect-ratio: 9 / 16;
-  overflow: hidden; 
-}
-
-/* 2. Make the Instagram iframe taller to push the bottom UI out of view */
-.video-card.portrait .video-frame iframe {
-  /* The extra 140px pushes the likes and comments down into the hidden overflow area */
-  height: calc(100% + 140px); 
-}

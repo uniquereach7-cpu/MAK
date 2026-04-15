@@ -21,17 +21,17 @@ export class Projects implements AfterViewInit {
   projects: Project[] = [
     {
       title: 'JANWADA MOKILA Independent House',
-      img: '/assets/media1.jpeg', // Replace with your actual image path
+      img: '/assets/media1.webp',
       category: 'Residential',
       size: 'Independent House',
-      link: '/projects/janwada-mokila'   // Replace with your actual route
+      link: '/projects/janwada-mokila'
     },
     {
       title: 'MAK Designs Experience Centre',
-      img: '/assets/projects-mak.jpeg', // Replace with your actual image path
+      img: '/assets/projects-mak.webp',
       category: 'Commercial',
       size: 'Experience Centre',
-      link: '/projects/mak-experience-centre'   // Replace with your actual route
+      link: '/projects/mak-experience-centre'
     }
   ];
 

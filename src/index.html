@@ -6,6 +6,17 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+  <!-- ── Critical resource preloads ─────────────────────────────────────
+       These tell the browser to start downloading before Angular boots.
+       Only preload what is visible WITHOUT scrolling on the first page.
+  ──────────────────────────────────────────────────────────────────── -->
+  <!-- Logo: shown instantly in the header on every page -->
+  <link rel="preload" as="image" href="assets/logo.webp" type="image/webp">
+  <!-- First hero slide: the very first thing visitors see -->
+  <link rel="preload" as="image" href="assets/mak9.webp" type="image/webp">
+  <!-- Second hero slide: pre-warm so the first transition is instant -->
+  <link rel="preload" as="image" href="assets/mak1.webp" type="image/webp">
 </head>
 <body>
   <app-root></app-root>

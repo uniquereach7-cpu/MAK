@@ -124,7 +124,10 @@
       <!-- RIGHT · Image panel -->
       <div class="ctn-img-col ctn-reveal">
         <div class="ctn-img-frame">
-          <img src="assets/updated7.jpg" alt="MAK Interior Design project" class="ctn-hero-img" loading="lazy" />
+          <picture>
+            <source srcset="assets/updated7.webp" type="image/webp">
+            <img src="assets/updated7.jpg" alt="MAK Interior Design project" class="ctn-hero-img" loading="eager" fetchpriority="high" decoding="async" />
+          </picture>
         </div>
       </div>
 
@@ -156,8 +159,8 @@
       <div class="ctn-info-card ctn-reveal">
         <span class="ctn-info-icon">📍</span>
         <h3 class="ctn-info-title">Our Location</h3>
-        <a href="https://www.google.com/maps/place/MAK+Interior+Designs/@17.3894881,78.3576404,17z" target="_blank"
-          rel="noopener" class="ctn-info-link ctn-info-link--addr">
+        <a href="https://maps.app.goo.gl/CSWQhVzPehqSfSNd7" target="_blank"
+           class="ctn-info-link ctn-info-link--addr">
           Sy No.283/U/1, Vattinagulapally, Gandipet, Kokapet, Rangareddy-500075.
         </a>
       </div>
@@ -186,9 +189,12 @@
     </div>
 
     <div class="ctn-map-wrap">
-      <a href="https://www.google.com/maps/place/MAK+Interior+Designs/@17.3894881,78.3576404,17z" target="_blank"
-        rel="noopener" class="ctn-map-link" title="Open MAK location in Google Maps">
-        <img src="assets/maps.png" alt="MAK location map preview" class="ctn-map-image" loading="lazy" />
+      <a href="https://maps.app.goo.gl/CSWQhVzPehqSfSNd7" target="_blank"
+         class="ctn-map-link" title="Open MAK location in Google Maps">
+        <picture>
+          <source srcset="assets/maps.webp" type="image/webp">
+          <img src="assets/maps.png" alt="MAK location map preview" class="ctn-map-image" loading="lazy" decoding="async" />
+        </picture>
       </a>
     </div>
   </section>

@@ -48,11 +48,17 @@
       <!-- Right: Founders image -->
       <div class="abt-who__img-col abt-reveal">
         <div class="abt-who__img-frame">
-          <img
-            src="assets/mak-founders.jpg"
-            alt="Kavitha Verma and Manoj Yadav — MAK Founders"
-            class="abt-who__img"
-          />
+          <picture>
+            <source srcset="assets/mak-founders.webp" type="image/webp">
+            <img
+              src="assets/mak-founders.jpg"
+              alt="Kavitha Verma and Manoj Yadav — MAK Founders"
+              class="abt-who__img"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </picture>
           <div class="abt-who__img-badge">
             <span class="abt-who__badge-year">Est.</span>
             <span class="abt-who__badge-num">2014</span>
@@ -97,7 +103,10 @@
           </p>
         </div>
         <div class="abt-story__img-wrap">
-          <img src="assets/mak16.jpeg" alt="MAK design studio beginnings" class="abt-story__img" />
+          <picture>
+            <source srcset="assets/mak16.webp" type="image/webp">
+            <img src="assets/mak16.jpeg" alt="MAK design studio beginnings" class="abt-story__img" loading="lazy" decoding="async" />
+          </picture>
           <div class="abt-story__img-caption">Crafting spaces since 2014</div>
         </div>
       </div>
@@ -105,7 +114,10 @@
       <!-- Row 2: Image left, Text right -->
       <div class="abt-story__row abt-story__row--reverse abt-reveal">
         <div class="abt-story__img-wrap">
-          <img src="assets/mak31.jpeg" alt="MAK Interiors project showcase" class="abt-story__img" />
+          <picture>
+            <source srcset="assets/mak31.webp" type="image/webp">
+            <img src="assets/mak31.jpeg" alt="MAK Interiors project showcase" class="abt-story__img" loading="lazy" decoding="async" />
+          </picture>
           <div class="abt-story__img-caption">Award-winning precision</div>
         </div>
         <div class="abt-story__text-block">
@@ -208,7 +220,10 @@
     <div class="abt-quote__inner">
 
       <div class="abt-quote__img-col abt-reveal">
-        <img src="assets/mak-founders.jpg" alt="MAK Founders" class="abt-quote__founders-img" />
+        <picture>
+          <source srcset="assets/mak-founders.webp" type="image/webp">
+          <img src="assets/mak-founders.jpg" alt="MAK Founders" class="abt-quote__founders-img" loading="lazy" decoding="async" />
+        </picture>
       </div>
 
       <div class="abt-quote__text-col abt-reveal">

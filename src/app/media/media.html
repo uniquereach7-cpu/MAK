@@ -75,26 +75,4 @@
       </article>
     </div>
   </section>
-
-  <section class="photo-gallery-section">
-    <div class="gallery-header">
-      <p class="eyebrow">Gallery</p>
-      <h2>Interior Highlights</h2>
-      <p class="gallery-subtitle">
-        A curated look at elegant spaces, materials, and finished details.
-      </p>
-    </div>
-
-    <div class="photo-grid">
-      <article class="photo-card" *ngFor="let image of galleryImages">
-        <div class="photo-frame">
-          <img
-            [src]="image.src"
-            [alt]="image.alt"
-            loading="eager"
-          />
-        </div>
-      </article>
-    </div>
-  </section>
 </section>

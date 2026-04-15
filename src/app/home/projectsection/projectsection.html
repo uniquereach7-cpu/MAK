@@ -5,7 +5,7 @@
 
     <ul class="projects-grid" role="list">
       <li *ngFor="let p of projects" class="project-item" role="listitem">
-        <a class="project-link" [href]="p.href || '#'" [attr.aria-label]="'Open project: ' + p.title">
+        <a class="project-link" [routerLink]="p.href" [attr.aria-label]="'Open project: ' + p.title">
           <div class="project-media" aria-hidden="true">
             <img [src]="p.img" [alt]="p.title" loading="lazy" decoding="async" />
           </div>

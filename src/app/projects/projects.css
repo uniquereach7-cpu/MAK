@@ -70,7 +70,7 @@
   position: relative;
   padding: 72px 5% 60px;
   text-align: center;
-  background-image: url('/assets/serviceshero2.jpg');
+  background-image: url('/assets/serviceshero2.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -212,7 +212,7 @@
    ============================================================ */
 .prj-grid-section {
   position: relative;
-  background-image: url('/assets/serviceshero.jpg');
+  background-image: url('/assets/serviceshero.webp');
   background-size: cover;
   background-position: center 40%;
   background-attachment: fixed;

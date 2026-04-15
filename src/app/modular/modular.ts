@@ -38,7 +38,7 @@ export class Modular {
       description:
         'Our modular kitchens blend ergonomic layouts with durable materials and refined finishes. We design efficient workflows, integrate appliances, and create tailored storage so every inch works for you — making cooking easier and surfaces clutter-free.',
       highlight: 'Efficient, elegant, and easy to maintain.',
-      image: 'assets/mak32.jpg',
+      image: 'assets/mak32.webp',
       link: 'EXPLORE PROJECTS',
     },
 
@@ -50,7 +50,7 @@ export class Modular {
       description:
         'Customizable wardrobes and storage systems that adapt to your belongings and room layout. Choose sliding or hinged doors, modular internal organizers, pull-out accessories, and finishes that match your interior for a seamless, high-functioning look.',
       highlight: 'Smart compartments for everyday ease.',
-      image: 'assets/mak30.jpeg',
+      image: 'assets/mak30.webp',
       link: 'EXPLORE PROJECTS',
     },
 
@@ -62,7 +62,7 @@ export class Modular {
       description:
         'Modular TV units, media walls, and display systems designed to anchor your living space. We focus on cable management, adaptable shelving, and modular sections that allow easy reconfiguration as your needs change.',
       highlight: 'Clean lines, practical storage, premium finishes.',
-      image: 'assets/mak34.jpg',
+      image: 'assets/mak34.webp',
       link: 'EXPLORE PROJECTS',
     },
 
@@ -74,7 +74,7 @@ export class Modular {
       description:
         'From study nooks and feature walls to office fit-outs and niche cabinetry, our custom modular solutions are engineered for unique briefs. We work with designers and architects to produce precision-made components and ensure smooth, professional installation.',
       highlight: 'Bespoke modules with factory precision.',
-      image: 'assets/updated2.jpg',
+      image: 'assets/updated2.webp',
       link: 'EXPLORE PROJECTS',
     },
   };

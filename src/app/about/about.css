@@ -79,7 +79,7 @@
    ============================================================ */
 .abt-who {
   position: relative;
-  background-image: url('/assets/hero1.jpg');
+  background-image: url('/assets/hero1.webp');
   background-size: cover;
   background-position: center 40%;
   background-repeat: no-repeat;
@@ -383,7 +383,7 @@
    ============================================================ */
 .abt-stats {
   position: relative;
-  background-image: url('/assets/mak8.jpeg');
+  background-image: url('/assets/mak8.webp');
   background-size: cover;
   background-position: center 55%;
   background-attachment: fixed;

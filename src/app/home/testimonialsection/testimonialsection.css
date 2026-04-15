@@ -27,7 +27,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url('/assets/updated9.jpg');
+  background-image: url('/assets/updated9.webp');
   background-size: cover;
   background-position: center center;
   filter: saturate(0.8) contrast(0.9);

@@ -9,10 +9,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './herosection.css',
 })
 export class Herosection implements OnInit, OnDestroy {
+  // WebP versions created by compress-images.mjs — 98% smaller than originals
   images: string[] = [
-    'assets/mak9.jpeg', // Make sure these match your exact file extensions (.jpg vs .jpeg)
-    'assets/mak1.jpeg',
-    'assets/mak6.jpeg'
+    'assets/mak9.webp',
+    'assets/mak1.webp',
+    'assets/mak6.webp'
   ];
   
   currentIndex: number = 0;
