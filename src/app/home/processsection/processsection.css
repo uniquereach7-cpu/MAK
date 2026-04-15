@@ -56,7 +56,7 @@
 .process-sub{
   color: beige;
   margin-bottom: 36px;
-  font-size: 16px;
+  font-size: 19px;
 }
 
 /* GRID: 4 columns (cards) */
@@ -145,14 +145,14 @@
 .card-id{
   color: burlywood;
   font-weight: 800;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: .6px;
 }
 
 /* title */
 .card-title{
   color: whitesmoke;
-  font-size: 20px;
+  font-size: 22px;
   margin: 0;
   font-weight: 800;
   text-transform: none;
@@ -162,8 +162,8 @@
 .card-sub{
   margin: 0;
   color: beige;
-  font-size: 14px;
-  line-height: 1.45;
+  font-size: 16px;
+  line-height: 1.5;
   max-width: 70%;
 }
 
@@ -205,6 +205,6 @@
   .process-title{ font-size: 36px; }
   .steps-grid{ grid-template-columns: 1fr; gap:14px; }
   .card-illustration{ display:none; }
-  .card-sub{ max-width: 100%; font-size: 14px; }
-  .card-title{ font-size: 18px; }
+  .card-sub{ max-width: 100%; font-size: 15px; }
+  .card-title{ font-size: 20px; }
 }

@@ -130,7 +130,7 @@
 
 .ctn-label {
   font-family: 'Playfair Display', serif; font-weight: 500;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text);
@@ -140,7 +140,7 @@
 .ctn-select,
 .ctn-textarea {
   font-family: 'Playfair Display', serif; font-weight: 400;
-  font-size: 0.88rem;
+  font-size: 1rem;
   color: var(--text);
   background: #ffffff;
   border: 1px solid var(--border);
@@ -209,7 +209,7 @@
   align-items: center;
   gap: 10px;
   font-family: 'Playfair Display', serif; font-weight: 600;
-  font-size: 0.82rem;
+  font-size: 0.92rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #ffffff;
@@ -243,7 +243,7 @@
 
 .ctn-submit-note {
   font-family: 'Playfair Display', serif; font-weight: 500;
-  font-size: 0.78rem;
+  font-size: 0.88rem;
   letter-spacing: 0.06em;
   color: var(--green);
   margin: 0;
@@ -369,7 +369,7 @@
 
 .ctn-info-title {
   font-family: 'Playfair Display', serif;
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: var(--text);
   margin: 0 0 10px 0;
   line-height: 1.2;
@@ -377,7 +377,7 @@
 
 .ctn-info-link {
   font-family: 'Playfair Display', serif; font-weight: 400;
-  font-size: 0.84rem;
+  font-size: 0.95rem;
   color: var(--text-muted);
   text-decoration: none;
   line-height: 1.6;
@@ -389,14 +389,14 @@
 }
 
 .ctn-info-link--addr {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   line-height: 1.55;
   margin-bottom: 6px;
 }
 
 .ctn-info-text {
   font-family: 'Playfair Display', serif; font-weight: 400;
-  font-size: 0.84rem;
+  font-size: 0.95rem;
   color: var(--text-muted);
   margin: 0;
   line-height: 1.6;

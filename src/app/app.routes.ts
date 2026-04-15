@@ -8,6 +8,7 @@ import { Projects } from './projects/projects';
 import { Modular } from './modular/modular';
 import { Header } from './header/header';
 import { Footer } from './footer/footer';
+import { Media } from './media/media';
 export const routes: Routes = [
   { path: '', component: Home },
   { path: 'home', component: Home },
@@ -16,6 +17,7 @@ export const routes: Routes = [
   { path: 'services', component: Services },
   { path: 'projects', component: Projects },
   { path: 'modular', component: Modular },
+  {path:'media',component: Media},
 
   // Optional: If no route matches → redirect to home
   { path: '**', redirectTo: '' },

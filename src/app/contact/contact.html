@@ -55,27 +55,13 @@
           <div class="ctn-form-row">
             <div class="ctn-field">
               <label class="ctn-label" for="ctn-name">Name</label>
-              <input
-                id="ctn-name"
-                class="ctn-input"
-                type="text"
-                name="name"
-                placeholder="Your full name"
-                [(ngModel)]="formData.name"
-                required
-              />
+              <input id="ctn-name" class="ctn-input" type="text" name="name" placeholder="Your full name"
+                [(ngModel)]="formData.name" required />
             </div>
             <div class="ctn-field">
               <label class="ctn-label" for="ctn-email">Email</label>
-              <input
-                id="ctn-email"
-                class="ctn-input"
-                type="email"
-                name="email"
-                placeholder="you&#64;example.com"
-                [(ngModel)]="formData.email"
-                required
-              />
+              <input id="ctn-email" class="ctn-input" type="email" name="email" placeholder="you&#64;example.com"
+                [(ngModel)]="formData.email" required />
             </div>
           </div>
 
@@ -83,27 +69,14 @@
           <div class="ctn-form-row">
             <div class="ctn-field">
               <label class="ctn-label" for="ctn-phone">Phone Number</label>
-              <input
-                id="ctn-phone"
-                class="ctn-input"
-                type="tel"
-                name="phone"
-                placeholder="+91 98765 43210"
-                [(ngModel)]="formData.phone"
-                required
-              />
+              <input id="ctn-phone" class="ctn-input" type="tel" name="phone" placeholder="+91 98765 43210"
+                [(ngModel)]="formData.phone" required />
             </div>
             <div class="ctn-field">
               <label class="ctn-label" for="ctn-service">Service Required</label>
               <div class="ctn-select-wrap">
-                <select
-                  id="ctn-service"
-                  class="ctn-select"
-                  name="service"
-                  [(ngModel)]="formData.service"
-                  required
-                >
-                  <option value="" disabled selected>Choose a service...</option>
+                <select id="ctn-service" class="ctn-select" name="service" [(ngModel)]="formData.service" required>
+                  <option value="" disabled>Choose a service...</option>
                   <option value="residential">Residential Interior Design</option>
                   <option value="commercial">Commercial Interior Design</option>
                   <option value="modular">Modular Kitchen &amp; Wardrobe</option>
@@ -119,26 +92,31 @@
           <!-- Message -->
           <div class="ctn-field ctn-field--full">
             <label class="ctn-label" for="ctn-message">Message / Special Requests</label>
-            <textarea
-              id="ctn-message"
-              class="ctn-textarea"
-              name="message"
-              placeholder="Anything else we should know?"
-              rows="5"
-              [(ngModel)]="formData.message"
-            ></textarea>
+            <textarea id="ctn-message" class="ctn-textarea" name="message" placeholder="Anything else we should know?"
+              rows="5" [(ngModel)]="formData.message"></textarea>
           </div>
 
           <!-- Submit -->
           <div class="ctn-submit-row">
-            <button type="submit" class="ctn-submit-btn">
-              Send Your Message
-              <span class="ctn-submit-arrow">↗</span>
-            </button>
-            <p class="ctn-submit-note" *ngIf="submitted">
-              ✦ Thank you! We'll be in touch shortly.
-            </p>
-          </div>
+  <button 
+    type="submit" 
+    class="ctn-submit-btn"
+    [disabled]="!contactForm.valid"
+  >
+    Send Your Message
+    <span class="ctn-submit-arrow">↗</span>
+  </button>
+
+  <!-- Success Message -->
+  <p class="ctn-submit-note success" *ngIf="submitted">
+    ✦ Thank you! We'll be in touch shortly.
+  </p>
+
+  <!-- Error Message -->
+  <p class="ctn-submit-note error" *ngIf="errorMessage">
+    {{ errorMessage }}
+  </p>
+</div>
 
         </form>
       </div>
@@ -146,12 +124,7 @@
       <!-- RIGHT · Image panel -->
       <div class="ctn-img-col ctn-reveal">
         <div class="ctn-img-frame">
-          <img
-            src="assets/bedrooom.jpg"
-            alt="MAK Interior Design project"
-            class="ctn-hero-img"
-            loading="lazy"
-          />
+          <img src="assets/updated7.jpg" alt="MAK Interior Design project" class="ctn-hero-img" loading="lazy" />
         </div>
       </div>
 
@@ -183,13 +156,9 @@
       <div class="ctn-info-card ctn-reveal">
         <span class="ctn-info-icon">📍</span>
         <h3 class="ctn-info-title">Our Location</h3>
-        <a
-          href="https://www.google.com/maps/place/MAK+Interior+Designs/@17.3894881,78.3576404,17z"
-          target="_blank"
-          rel="noopener"
-          class="ctn-info-link ctn-info-link--addr"
-        >
-           Sy No.283/U/1, Vattinagulapally, Gandipet, Kokapet, Rangareddy-500075.
+        <a href="https://www.google.com/maps/place/MAK+Interior+Designs/@17.3894881,78.3576404,17z" target="_blank"
+          rel="noopener" class="ctn-info-link ctn-info-link--addr">
+          Sy No.283/U/1, Vattinagulapally, Gandipet, Kokapet, Rangareddy-500075.
         </a>
       </div>
 
@@ -198,7 +167,7 @@
         <span class="ctn-info-icon">🕐</span>
         <h3 class="ctn-info-title">Working Hours</h3>
         <p class="ctn-info-text">Mon – Sat: 9am – 6pm</p>
-        <p class="ctn-info-text">Sunday: Closed</p>
+        <p class="ctn-info-text">Sunday: 10am – 1pm</p>
       </div>
 
     </div>
@@ -217,19 +186,9 @@
     </div>
 
     <div class="ctn-map-wrap">
-      <a
-        href="https://www.google.com/maps/place/MAK+Interior+Designs/@17.3894881,78.3576404,17z"
-        target="_blank"
-        rel="noopener"
-        class="ctn-map-link"
-        title="Open MAK location in Google Maps"
-      >
-        <img
-          src="assets/maps.png"
-          alt="MAK location map preview"
-          class="ctn-map-image"
-          loading="lazy"
-        />
+      <a href="https://www.google.com/maps/place/MAK+Interior+Designs/@17.3894881,78.3576404,17z" target="_blank"
+        rel="noopener" class="ctn-map-link" title="Open MAK location in Google Maps">
+        <img src="assets/maps.png" alt="MAK location map preview" class="ctn-map-image" loading="lazy" />
       </a>
     </div>
   </section>

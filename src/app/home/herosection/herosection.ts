@@ -10,9 +10,9 @@ import { CommonModule } from '@angular/common';
 })
 export class Herosection implements OnInit, OnDestroy {
   images: string[] = [
-    'assets/hero1.jpg', // Make sure these match your exact file extensions (.jpg vs .jpeg)
-    'assets/hero2.jpg',
-    'assets/hero3.jpg'
+    'assets/mak9.jpeg', // Make sure these match your exact file extensions (.jpg vs .jpeg)
+    'assets/mak1.jpeg',
+    'assets/mak6.jpeg'
   ];
   
   currentIndex: number = 0;

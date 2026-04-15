@@ -38,29 +38,15 @@
        SECTION 2 · PORTFOLIO GRID
        Background image + dark overlay + 3×3 grid
        ====================================================== -->
-  <section class="prj-grid-section">
-    <div class="prj-grid-section__bg-overlay"></div>
-
-    <div class="prj-grid-section__inner">
-
-      <!-- Section label -->
-      <div class="prj-grid-label-row prj-reveal">
-        <div class="prj-label-line"></div>
-        <span class="prj-label-text">SELECT WORKS</span>
-        <div class="prj-label-line"></div>
-      </div>
-
-      <!-- 3×3 Grid -->
-      <div class="prj-grid">
-        <div
+  <div class="prj-grid">
+        <a
           *ngFor="let p of projects; let i = index"
           class="prj-card"
-          [style.--stagger]="(i % 3) * 100 + 'ms'"
+          [style.--stagger]="(i % 2) * 100 + 'ms'"
+          [routerLink]="p.link"
         >
-          <!-- Category badge -->
           <div class="prj-card__badge">{{ p.category }}</div>
 
-          <!-- Image -->
           <div class="prj-card__media">
             <img
               [src]="p.img"
@@ -71,7 +57,6 @@
             />
           </div>
 
-          <!-- Hover overlay -->
           <div class="prj-card__overlay">
             <div class="prj-card__overlay-inner">
               <span class="prj-card__size">{{ p.size }}</span>
@@ -83,16 +68,11 @@
             </div>
           </div>
 
-          <!-- Subtle permanent bottom gradient (title always visible) -->
           <div class="prj-card__bottom-bar">
             <span class="prj-card__bottom-title">{{ p.title }}</span>
           </div>
-        </div>
+        </a>
       </div>
-
-    </div>
-  </section>
-
   <!-- ======================================================
        SECTION 3 · CTA
        Light bg, call to action

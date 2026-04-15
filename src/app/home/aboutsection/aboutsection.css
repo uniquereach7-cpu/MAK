@@ -76,7 +76,7 @@
 }
 
 .lead {
-  font-size: 16px;
+  font-size: 19px;
   line-height: 1.7;
   color: var(--text-dark); 
   margin-bottom: 30px;
@@ -90,7 +90,7 @@
 }
 
 .service-item h3 {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--gold);
   margin: 0 0 8px 0;
   text-transform: uppercase;
@@ -99,7 +99,7 @@
 }
 
 .service-item p {
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.6;
   color: var(--text-dark);
   margin: 0;

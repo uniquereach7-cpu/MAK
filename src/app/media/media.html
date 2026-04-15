@@ -1,0 +1,100 @@
+<section class="media-page">
+  <div class="media-header">
+    <h1>Our Video Gallery</h1>
+    <p class="subtitle">
+      Explore project stories, design walkthroughs, and curated interior highlights.
+    </p>
+  </div>
+
+  <div class="video-grid">
+    <article
+      class="video-card"
+      *ngFor="let video of videos"
+      [ngClass]="video.type"
+    >
+      <div class="video-frame">
+        <iframe
+          [src]="video.embedUrl"
+          [title]="video.title"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="video-info">
+        <h3>{{ video.title }}</h3>
+        <a
+          class="video-link"
+          [href]="video.watchUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Watch on YouTube
+        </a>
+      </div>
+    </article>
+  </div>
+  <section class="reels-section">
+    <div class="gallery-header">
+      <p class="eyebrow">Shorts & Reels</p>
+      <h2>Bite-Sized Design Tours</h2>
+      <p class="gallery-subtitle">
+        Quick glimpses into our design process and final setups.
+      </p>
+    </div>
+
+    <div class="reels-grid">
+      <article
+        class="video-card portrait"
+        *ngFor="let reel of reels"
+      >
+        <div class="video-frame">
+          <iframe
+            [src]="reel.embedUrl"
+            loading="eager"
+            frameborder="0"
+            scrolling="no"
+            allowtransparency="true"
+            allow="encrypted-media">
+          </iframe>
+        </div>
+
+        <div class="video-info">
+          <a
+            class="video-link"
+            [href]="reel.watchUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Watch on Instagram
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="photo-gallery-section">
+    <div class="gallery-header">
+      <p class="eyebrow">Gallery</p>
+      <h2>Interior Highlights</h2>
+      <p class="gallery-subtitle">
+        A curated look at elegant spaces, materials, and finished details.
+      </p>
+    </div>
+
+    <div class="photo-grid">
+      <article class="photo-card" *ngFor="let image of galleryImages">
+        <div class="photo-frame">
+          <img
+            [src]="image.src"
+            [alt]="image.alt"
+            loading="eager"
+          />
+        </div>
+      </article>
+    </div>
+  </section>
+</section>

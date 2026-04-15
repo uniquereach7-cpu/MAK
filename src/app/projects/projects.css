@@ -134,7 +134,7 @@
 /* Description */
 .prj-hero__desc {
   font-family: 'Playfair Display', serif; font-weight: 300;
-  font-size: clamp(0.88rem, 1.3vw, 1rem);
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
   line-height: 1.78;
   color: var(--text-muted);
   max-width: 620px;
@@ -271,16 +271,20 @@
    ============================================================ */
 .prj-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr); /* Changed to 2 columns */
+  gap: 36px; /* Increased gap for larger cards */
+  max-width: 1200px; /* Constrains width so they don't stretch too far on huge screens */
+  margin: 0 auto;
 }
 
 .prj-card {
   position: relative;
+  display: block; /* Added since it is now an <a> tag */
+  text-decoration: none; /* Removes default link styling */
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10; /* Changed from 4/3 to make them larger and wider */
   background: #111;
 
   /* Scroll reveal initial state */
@@ -291,6 +295,7 @@
     transform 0.65s cubic-bezier(0.22, 1, 0.36, 1) var(--stagger, 0ms),
     box-shadow 0.4s ease;
 }
+
 .prj-card.visible {
   opacity: 1;
   transform: translateY(0) scale(1);
@@ -502,7 +507,7 @@
 
 .prj-cta__desc {
   font-family: 'Playfair Display', serif; font-weight: 300;
-  font-size: 0.92rem;
+  font-size: 1.02rem;
   line-height: 1.75;
   color: var(--text-muted);
   margin: 0 0 36px 0;
@@ -562,6 +567,45 @@
   }
   .prj-card {
     aspect-ratio: 3 / 2;
+  }
+  .prj-hero__stat {
+    flex: 1 1 40%;
+  }
+  .prj-hero__heading {
+    font-size: 36px;
+  }
+}
+@media (max-width: 1100px) {
+  .prj-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 860px) {
+  .prj-grid {
+    grid-template-columns: 1fr; /* Drops to 1 column earlier due to larger cards */
+    gap: 24px;
+  }
+  .prj-hero__stats {
+    flex-wrap: wrap;
+  }
+  .prj-hero__stat {
+    padding: 16px 20px;
+    flex: 1 1 40%;
+  }
+  .prj-hero__stat-sep:nth-child(4) {
+    display: none;
+  }
+}
+
+@media (max-width: 580px) {
+  .prj-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .prj-card {
+    aspect-ratio: 3 / 2; /* Keeps them looking good on mobile */
   }
   .prj-hero__stat {
     flex: 1 1 40%;

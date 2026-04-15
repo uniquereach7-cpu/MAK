@@ -7,26 +7,27 @@
    ============================================================ */
 .abt-page {
   /* Light palette (matches services page) */
-  --bg:          #ede8df;
-  --bg-alt:      #f3efe8;
-  --green:       #1e3520;
-  --green-mid:   #2d4a2d;
-  --text:        #1a1a1a;
-  --text-muted:  #7a7570;
-  --border:      #d8d0c5;
+  --bg: #ede8df;
+  --bg-alt: #f3efe8;
+  --green: #1e3520;
+  --green-mid: #2d4a2d;
+  --text: #1a1a1a;
+  --text-muted: black;
+  --border: #d8d0c5;
 
   /* Gold palette (used in dark sections) */
-  --gold:        #c99c43;
-  --gold-dim:    rgba(201, 156, 67, 0.18);
+  --gold: #c99c43;
+  --gold-dim: rgba(201, 156, 67, 0.18);
   --gold-bright: #e5b33f;
 
   /* Dark section backgrounds */
-  --dark:        #0c1810;
-  --dark-mid:    #111f14;
+  --dark: #0c1810;
+  --dark-mid: #111f14;
 
   background-color: var(--bg);
   color: var(--text);
-  font-family: 'Playfair Display', serif; font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
   padding-top: 50px;
   overflow-x: hidden;
 }
@@ -38,17 +39,20 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  font-family: 'Playfair Display', serif; font-weight: 500;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
   font-size: 0.68rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--text-muted);
   margin-bottom: 14px;
 }
+
 .abt-section-tag--center {
   display: flex;
   justify-content: center;
 }
+
 .abt-tag-icon {
   font-size: 0.6rem;
 }
@@ -63,6 +67,7 @@
     opacity 0.7s ease var(--stagger, 0ms),
     transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--stagger, 0ms);
 }
+
 .abt-reveal.visible {
   opacity: 1;
   transform: translateY(0);
@@ -85,12 +90,10 @@
 .abt-who__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(12, 24, 16, 0.96) 0%,
-    rgba(12, 24, 16, 0.88) 60%,
-    rgba(12, 24, 16, 0.7) 100%
-  );
+  background: linear-gradient(to right,
+      rgba(12, 24, 16, 0.96) 0%,
+      rgba(12, 24, 16, 0.88) 60%,
+      rgba(12, 24, 16, 0.7) 100%);
   z-index: 0;
 }
 
@@ -118,7 +121,8 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Playfair Display', serif; font-weight: 500;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
   font-size: 0.68rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -143,16 +147,20 @@
 
 /* Paragraphs */
 .abt-who__para {
-  font-family: 'Playfair Display', serif; font-weight: 300;
-  font-size: clamp(0.88rem, 1.2vw, 1rem);
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
   line-height: 1.78;
   color: rgba(255, 255, 255, 0.82);
   margin: 0 0 22px 0;
 }
+
 .abt-who__para strong {
-  font-family: 'Playfair Display', serif; font-weight: 600;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
   color: #ffffff;
 }
+
 .abt-who__para:last-of-type {
   margin-bottom: 32px;
 }
@@ -164,12 +172,14 @@
   gap: 12px;
   max-width: 280px;
 }
+
 .abt-who__divider span:first-child,
 .abt-who__divider span:last-child {
   flex: 1;
   height: 1px;
   background: rgba(201, 156, 67, 0.4);
 }
+
 .abt-who__divider-icon {
   font-size: 0.65rem;
   color: var(--gold);
@@ -199,6 +209,7 @@
   filter: brightness(0.95);
   transition: filter 0.4s ease;
 }
+
 .abt-who__img:hover {
   filter: brightness(1.05);
 }
@@ -218,16 +229,19 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
+
 .abt-who__badge-year {
-  font-family: 'Playfair Display', serif; font-weight: 300;
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
   font-size: 0.6rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--dark);
   line-height: 1.2;
 }
+
 .abt-who__badge-num {
   font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
@@ -264,6 +278,7 @@
   margin: 0;
   letter-spacing: -0.01em;
 }
+
 .abt-story__heading em {
   font-family: 'Playfair Display', serif;
   font-style: italic;
@@ -277,9 +292,11 @@
   gap: 64px;
   margin-bottom: 72px;
 }
+
 .abt-story__row--reverse {
   flex-direction: row-reverse;
 }
+
 .abt-story__row:last-child {
   margin-bottom: 0;
 }
@@ -298,6 +315,7 @@
   position: relative;
   padding-left: 18px;
 }
+
 .abt-story__sub-heading::before {
   content: '';
   position: absolute;
@@ -311,12 +329,14 @@
 }
 
 .abt-story__para {
-  font-family: 'Playfair Display', serif; font-weight: 300;
-  font-size: clamp(0.86rem, 1.15vw, 0.98rem);
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
+  font-size: clamp(1rem, 1.25vw, 1.1rem);
   line-height: 1.82;
   color: var(--text-muted);
   margin: 0 0 18px 0;
 }
+
 .abt-story__para:last-child {
   margin-bottom: 0;
 }
@@ -328,6 +348,7 @@
   overflow: hidden;
   border-radius: 4px;
 }
+
 .abt-story__img {
   width: 100%;
   height: 380px;
@@ -336,20 +357,23 @@
   display: block;
   transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
 .abt-story__img-wrap:hover .abt-story__img {
   transform: scale(1.05);
 }
+
 .abt-story__img-caption {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   background: linear-gradient(to top, rgba(12, 24, 16, 0.75) 0%, transparent 100%);
-  font-family: 'Playfair Display', serif; font-weight: 500;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
   font-size: 0.7rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
   padding: 20px 16px 12px;
 }
 
@@ -359,7 +383,7 @@
    ============================================================ */
 .abt-stats {
   position: relative;
-  background-image: url('/assets/serviceshero.jpg');
+  background-image: url('/assets/mak8.jpeg');
   background-size: cover;
   background-position: center 55%;
   background-attachment: fixed;
@@ -371,12 +395,10 @@
 .abt-stats__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(8, 16, 10, 0.88) 0%,
-    rgba(8, 16, 10, 0.75) 50%,
-    rgba(8, 16, 10, 0.82) 100%
-  );
+  background: linear-gradient(to right,
+      rgba(8, 16, 10, 0.88) 0%,
+      rgba(8, 16, 10, 0.75) 50%,
+      rgba(8, 16, 10, 0.82) 100%);
   z-index: 0;
 }
 
@@ -397,22 +419,25 @@
   width: 100%;
   text-align: center;
 }
+
 .abt-stats__section-label-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
 }
+
 .abt-stats__section-label {
   font-family: 'Playfair Display', serif;
   font-size: clamp(14px, 1.4vw, 18px);
   font-weight: bold;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
   letter-spacing: 0.22em;
   text-transform: uppercase;
   margin: 0;
   white-space: nowrap;
 }
+
 .abt-stats__label-divider {
   flex: 1;
   max-width: 120px;
@@ -439,8 +464,15 @@
 }
 
 @keyframes statFadeIn {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Gold icon circle */
@@ -456,9 +488,11 @@
   box-shadow: 0 4px 20px rgba(201, 156, 67, 0.4);
   transition: transform 0.3s ease;
 }
+
 .abt-stats__item:hover .abt-stats__icon-circle {
   transform: scale(1.08);
 }
+
 .abt-stats__icon {
   font-size: 1.5rem;
   filter: brightness(0);
@@ -472,7 +506,8 @@
 }
 
 .abt-stats__label {
-  font-family: 'Playfair Display', serif; font-weight: 300;
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
   font-size: 0.72rem;
   letter-spacing: 0.1em;
   color: rgba(255, 255, 255, 0.7);
@@ -509,6 +544,7 @@
   margin: 0 0 16px 0;
   letter-spacing: -0.01em;
 }
+
 .abt-why__heading em {
   font-family: 'Playfair Display', serif;
   font-style: italic;
@@ -516,7 +552,8 @@
 }
 
 .abt-why__sub {
-  font-family: 'Playfair Display', serif; font-weight: 300;
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
   font-size: clamp(0.88rem, 1.2vw, 1rem);
   line-height: 1.72;
   color: var(--text-muted);
@@ -544,6 +581,7 @@
     background-color 0.28s ease;
   cursor: default;
 }
+
 .abt-why__card:hover {
   transform: translateY(-6px);
   border-color: var(--green);
@@ -557,6 +595,7 @@
   display: block;
   transition: transform 0.3s ease;
 }
+
 .abt-why__card:hover .abt-why__card-icon {
   transform: scale(1.15) rotate(5deg);
 }
@@ -572,8 +611,9 @@
 }
 
 .abt-why__card-desc {
-  font-family: 'Playfair Display', serif; font-weight: 300;
-  font-size: 0.84rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
+  font-size: 0.95rem;
   line-height: 1.72;
   color: var(--text-muted);
   margin: 0;
@@ -618,6 +658,7 @@
 .abt-quote__img-col {
   flex: 0 0 280px;
 }
+
 .abt-quote__founders-img {
   width: 100%;
   aspect-ratio: 3/4;
@@ -628,6 +669,7 @@
   filter: sepia(0.15) brightness(0.9);
   transition: filter 0.4s ease;
 }
+
 .abt-quote__founders-img:hover {
   filter: sepia(0) brightness(1);
 }
@@ -652,10 +694,11 @@
   padding: 0;
   border: none;
 }
+
 .abt-quote__blockquote em {
   font-family: 'Playfair Display', serif;
   font-style: italic;
-  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
   line-height: 1.72;
   color: rgba(255, 255, 255, 0.9);
   display: block;
@@ -669,12 +712,14 @@
   max-width: 220px;
   margin-bottom: 24px;
 }
+
 .abt-quote__divider span:first-child,
 .abt-quote__divider span:last-child {
   flex: 1;
   height: 1px;
   background: rgba(201, 156, 67, 0.35);
 }
+
 .abt-quote__divider-icon {
   font-size: 0.6rem;
   color: var(--gold);
@@ -687,14 +732,18 @@
   gap: 4px;
   font-style: normal;
 }
+
 .abt-quote__founder-name {
-  font-family: 'Playfair Display', serif; font-weight: 600;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
   font-size: 1rem;
   letter-spacing: 0.05em;
   color: var(--gold);
 }
+
 .abt-quote__founder-title {
-  font-family: 'Playfair Display', serif; font-weight: 300;
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
   font-size: 0.76rem;
   letter-spacing: 0.08em;
   color: rgba(255, 255, 255, 0.5);
@@ -708,9 +757,11 @@
   .abt-why__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .abt-who__inner {
     gap: 40px;
   }
+
   .abt-stats__label-col {
     flex: 0 0 160px;
     margin-right: 32px;
@@ -724,9 +775,11 @@
     padding: 64px 6% 64px;
     gap: 48px;
   }
+
   .abt-who__content {
     flex: none;
   }
+
   .abt-who__img-col {
     flex: none;
     width: 100%;
@@ -737,15 +790,18 @@
   .abt-story {
     padding: 64px 6% 60px;
   }
+
   .abt-story__row {
     flex-direction: column !important;
     gap: 36px;
     margin-bottom: 52px;
   }
+
   .abt-story__img-wrap {
     flex: none;
     width: 100%;
   }
+
   .abt-story__img {
     height: 280px;
   }
@@ -754,6 +810,7 @@
     gap: 32px;
     padding: 56px 6%;
   }
+
   .abt-stats__grid {
     flex-wrap: wrap;
     justify-content: center;
@@ -765,6 +822,7 @@
     gap: 40px;
     align-items: flex-start;
   }
+
   .abt-quote__img-col {
     flex: none;
     width: 200px;
@@ -775,19 +833,24 @@
   .abt-why__grid {
     grid-template-columns: 1fr;
   }
+
   .abt-who__heading {
     font-size: 48px;
   }
+
   .abt-stats__grid {
     gap: 28px 32px;
   }
+
   .abt-stats__number {
     font-size: 36px;
   }
+
   .abt-stats__icon-circle {
     width: 52px;
     height: 52px;
   }
+
   .abt-stats__icon {
     font-size: 1.2rem;
   }

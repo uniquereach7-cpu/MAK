@@ -5,19 +5,21 @@
    DESIGN TOKENS
    ============================================================ */
 .mod-page {
-  --mod-bg:          #ede8df;
-  --mod-bg-alt:      #f3efe8;
-  --mod-green-dark:  #1e3520;
-  --mod-green-mid:   #2d4a2d;
-  --mod-text:        #1a1a1a;
-  --mod-text-muted:  #7a7570;
-  --mod-border:      #d8d0c5;
-  --mod-tag-color:   #8a8078;
+  --mod-bg: #ede8df;
+  --mod-bg-alt: #f3efe8;
+  --mod-green-dark: #1e3520;
+  --mod-green-mid: #2d4a2d;
+  --mod-text: #1a1a1a;
+  --mod-text-muted: #7a7570;
+  --mod-border: #d8d0c5;
+  --mod-tag-color: #8a8078;
 
   background-color: var(--mod-bg);
-  font-family: 'Playfair Display', serif; font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
   color: var(--mod-text);
-  padding-top: 100px; /* offset for fixed header */
+  padding-top: 100px;
+  /* offset for fixed header */
 }
 
 /* ============================================================
@@ -27,28 +29,34 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-family: 'Playfair Display', serif; font-weight: 500;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
   font-size: 0.7rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--mod-tag-color);
   margin-bottom: 14px;
 }
+
 .mod-section-tag--center {
   justify-content: center;
 }
+
 .mod-tag-icon {
   font-size: 0.65rem;
   color: var(--mod-tag-color);
 }
+
 .mod-link-arrow {
   display: inline-block;
   margin-left: 4px;
 }
+
 .mod-text-link {
   display: inline-flex;
   align-items: center;
-  font-family: 'Playfair Display', serif; font-weight: 500;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
   font-size: 0.78rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -58,6 +66,7 @@
   padding-bottom: 1px;
   transition: opacity 0.2s ease;
 }
+
 .mod-text-link:hover {
   opacity: 0.65;
 }
@@ -107,7 +116,8 @@
 }
 
 .mod-hero__subtitle {
-  font-family: 'Playfair Display', serif; font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
   font-size: 0.88rem;
   line-height: 1.55;
   color: var(--mod-text);
@@ -117,7 +127,8 @@
 .mod-hero__explore-link {
   display: inline-flex;
   align-items: center;
-  font-family: 'Playfair Display', serif; font-weight: 500;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
   font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -127,6 +138,7 @@
   padding-bottom: 2px;
   transition: opacity 0.2s;
 }
+
 .mod-hero__explore-link:hover {
   opacity: 0.6;
 }
@@ -138,6 +150,7 @@
   overflow: hidden;
   border-radius: 4px;
 }
+
 .mod-hero__image {
   width: 100%;
   height: 100%;
@@ -179,6 +192,7 @@
   border-radius: 4px;
   max-height: 400px;
 }
+
 .mod-about__side-image img {
   width: 100%;
   height: 100%;
@@ -206,10 +220,11 @@
 }
 
 .mod-about__desc {
-  font-family: 'Playfair Display', serif; font-weight: 300;
-  font-size: 0.85rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
+  font-size: 0.95rem;
   line-height: 1.7;
-  color: var(--mod-text-muted);
+  color: black;
   margin: 0 0 24px 0;
 }
 
@@ -245,7 +260,8 @@
 }
 
 .mod-why__feature-title {
-  font-family: 'Playfair Display', serif; font-weight: 500;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--mod-text);
@@ -261,10 +277,11 @@
 }
 
 .mod-why__feature-desc {
-  font-family: 'Playfair Display', serif; font-weight: 300;
-  font-size: 0.82rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
+  font-size: 0.92rem;
   line-height: 1.6;
-  color: var(--mod-text-muted);
+  color: black;
   margin: 0;
 }
 
@@ -274,6 +291,7 @@
   overflow: hidden;
   border-radius: 4px;
 }
+
 .mod-about__right-image img {
   width: 100%;
   height: 100%;
@@ -342,7 +360,7 @@
   flex-direction: column;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
 }
 
 /* Card image */
@@ -352,6 +370,7 @@
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .mod-products__card-img {
   width: 100%;
   height: 100%;
@@ -360,6 +379,7 @@
   display: block;
   transition: transform 0.4s ease;
 }
+
 .mod-products__card:hover .mod-products__card-img {
   transform: scale(1.04);
 }
@@ -418,7 +438,7 @@
 .mod-products__card-desc {
   font-family: 'Playfair Display', serif;
   font-weight: 300;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   line-height: 1.7;
   color: #555555;
   margin: 0;
@@ -445,7 +465,8 @@
 }
 
 .mod-services__subtitle {
-  font-family: 'Playfair Display', serif; font-weight: 300;
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
   font-size: 0.88rem;
   line-height: 1.65;
   color: var(--mod-text-muted);
@@ -472,7 +493,8 @@
   width: 100%;
   padding: 14px 18px;
   text-align: left;
-  font-family: 'Playfair Display', serif; font-weight: 500;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
   font-size: 0.88rem;
   letter-spacing: 0.02em;
   color: var(--mod-text);
@@ -482,9 +504,11 @@
   cursor: pointer;
   transition: background-color 0.25s ease, color 0.25s ease;
 }
+
 .mod-tab:hover:not(.mod-tab--active) {
   background-color: #e0d9cf;
 }
+
 .mod-tab--active {
   background-color: var(--mod-green-dark);
   color: #ffffff;
@@ -506,6 +530,7 @@
   border-radius: 4px;
   max-height: 320px;
 }
+
 .mod-services__image {
   width: 100%;
   height: 100%;
@@ -532,23 +557,26 @@
   margin: 0 0 4px 0;
   line-height: 1.2;
 }
+
 .mod-services__title em {
   font-family: 'Playfair Display', serif;
   /* font-style: italic; */
 }
 
 .mod-services__sub {
-  font-family: 'Playfair Display', serif; font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
   font-size: 1rem;
   color: var(--mod-green-dark);
   margin: 0 0 16px 0;
 }
 
 .mod-services__desc {
-  font-family: 'Playfair Display', serif; font-weight: 300;
-  font-size: 0.85rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
+  font-size: 0.95rem;
   line-height: 1.7;
-  color: var(--mod-text-muted);
+  color: black;
   margin: 0 0 20px 0;
 }
 
@@ -558,13 +586,16 @@
   gap: 10px;
   margin-bottom: 28px;
 }
+
 .mod-services__highlight-icon {
   flex-shrink: 0;
   color: var(--mod-green-mid);
   margin-top: 1px;
 }
+
 .mod-services__highlight span:last-child {
-  font-family: 'Playfair Display', serif; font-weight: 500;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
   font-size: 0.83rem;
   line-height: 1.5;
   color: var(--mod-text);
@@ -582,50 +613,62 @@
   .mod-products__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .mod-products__card {
     border-right: none;
     border-bottom: 1px solid #e5e0d8;
   }
+
   .mod-products__card:last-child {
     border-bottom: none;
   }
+
   .mod-hero__top {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .mod-hero__info-col {
     text-align: left;
   }
+
   .mod-about {
     flex-direction: column;
     padding: 40px 5% 0;
   }
+
   .mod-about__left-area {
     flex: none;
     padding-right: 0;
     margin-bottom: 24px;
   }
+
   .mod-about__right-image {
     flex: none;
     width: 100%;
     height: 300px;
   }
+
   .mod-services__body {
     flex-direction: column;
   }
+
   .mod-services__tabs {
     flex: none;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
   }
+
   .mod-tab {
     flex: 1 1 auto;
     min-width: 140px;
   }
+
   .mod-services__panel {
     flex-direction: column;
   }
+
   .mod-services__image-wrap {
     flex: none;
     width: 100%;
@@ -637,17 +680,21 @@
   .mod-products__grid {
     grid-template-columns: 1fr;
   }
+
   .mod-products__card-img-wrap {
     height: 180px;
   }
+
   .mod-about__top-row {
     flex-direction: column;
   }
+
   .mod-about__side-image {
     flex: none;
     width: 100%;
     max-height: 240px;
   }
+
   .mod-why__features {
     flex-direction: column;
     gap: 24px;

@@ -10,6 +10,7 @@
       <li><a routerLink="/about" routerLinkActive="active">About</a></li>
       <li><a routerLink="/modular" routerLinkActive="active">Modular</a></li>
       <li><a routerLink="/services" routerLinkActive="active">Services</a></li>
+      <li><a routerLink="/media" routerLinkActive="active">Media</a></li>
       <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
       <li><a routerLink="/home" fragment="testimonials">Testimonials</a></li>
       <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
@@ -34,6 +35,7 @@
 <div class="mobile-menu" [class.is-open]="menuOpen">
   <nav>
     <ul>
+      <li><a routerLink="/home" routerLinkActive="active" (click)="closeMenu()">Home</a></li>
       <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
       <li><a routerLink="/modular" routerLinkActive="active" (click)="closeMenu()">Modular</a></li>
       <li><a routerLink="/services" routerLinkActive="active" (click)="closeMenu()">Services</a></li>

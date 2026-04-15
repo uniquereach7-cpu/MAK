@@ -7,6 +7,7 @@ export interface Project {
   img: string;
   category: string;
   size?: string;
+  link: string; // Added to handle navigation
 }
 
 @Component({
@@ -19,59 +20,19 @@ export class Projects implements AfterViewInit {
 
   projects: Project[] = [
     {
-      title: 'Aparna Serene Park',
-      img: '/assets/Aparna-Serene-Parl.jpg',
+      title: 'JANWADA MOKILA Independent House',
+      img: '/assets/media1.jpeg', // Replace with your actual image path
       category: 'Residential',
-      size: '3BHK',
+      size: 'Independent House',
+      link: '/projects/janwada-mokila'   // Replace with your actual route
     },
     {
-      title: 'Chandanagar Avantika',
-      img: '/assets/Chandanagr-Avantika Residency.jpg',
-      category: 'Residential',
-      size: '2BHK',
-    },
-    {
-      title: 'Boduppal Residence',
-      img: '/assets/Boduppal.jpg',
-      category: 'Premium Interiors',
-      size: '4BHK',
-    },
-    {
-      title: 'Aditya Villa Grande',
-      img: '/assets/Aditya-Villa.jpg',
-      category: 'Premium Villa',
-      size: 'Duplex',
-    },
-    {
-      title: 'TNR Sulakshana · C-718',
-      img: '/assets/TNR-Sulakshana-C-Block-718.jpg',
-      category: 'Modular Kitchen',
-      size: '3BHK',
-    },
-    {
-      title: 'Aparna Sarovar Grand',
-      img: '/assets/Aparna-Sarovar-Grand.jpg',
-      category: 'Residential',
-      size: '3BHK',
-    },
-    {
-      title: 'TNR Sulakshana · E-612',
-      img: '/assets/TNR-sulakashana-E-Block-111.jpg',
-      category: 'Modular',
-      size: '2BHK',
-    },
-    {
-      title: 'Subishi Gouthami Kompally',
-      img: '/assets/Subishi-Gouthami-Kompally.jpg',
+      title: 'MAK Designs Experience Centre',
+      img: '/assets/projects-mak.jpeg', // Replace with your actual image path
       category: 'Commercial',
-      size: 'Office Space',
-    },
-    {
-      title: 'TNR Sulakshana · E-111',
-      img: '/assets/TNR-Sulakshana-E-Block-111.jpg',
-      category: 'Modular',
-      size: '3BHK',
-    },
+      size: 'Experience Centre',
+      link: '/projects/mak-experience-centre'   // Replace with your actual route
+    }
   ];
 
   ngAfterViewInit() {
