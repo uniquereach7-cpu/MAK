@@ -61,6 +61,10 @@
   transition: color 0.3s ease;
 }
 
+.desktop-nav ul li a.header-phone {
+  white-space: nowrap;
+}
+
 .desktop-nav ul li a:hover,
 .desktop-nav ul li a.active {
   color: #e5b33f;
